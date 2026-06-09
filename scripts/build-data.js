@@ -30,6 +30,24 @@ const BASE_CURRENCY = 'USD';
 // Helper: Get date string (YYYY-MM-DD)
 const getDateString = (date) => date.toISOString().split('T')[0];
 
+// Helper: Map ISIN or Broker Ticker to Yahoo Finance symbol
+const getYahooTicker = (symbol, isin) => {
+  const isinMap = {
+    'SE0003917798': 'SIVE.ST', // Sivers Semiconductors (Stockholm)
+    // Add other assets here if they don't map cleanly by symbol
+  };
+  
+  if (isin && isinMap[isin]) {
+    return isinMap[isin];
+  }
+  
+  if (!symbol) return '';
+  
+  // Clean T212 suffixes
+  let clean = symbol.replace(/_US_EQ|_EQ|_US/g, '');
+  return clean;
+};
+
 /**
  * Generates high-fidelity mock data if no API keys are provided.
  * Serves as a perfect fallback for local development or demo purposes.
@@ -273,17 +291,26 @@ async function fetchTrading212() {
   // 2. Fetch positions
   const positionsRes = await axios.get(`${baseUrl}/equity/positions`, { headers });
   console.log("Trading 212 raw position sample:", JSON.stringify(positionsRes.data[0] || {}));
-  const t212Positions = positionsRes.data.map(pos => ({
-    symbol: pos.ticker, // e.g., AAPL_US -> needs mapping or normalization
-    name: pos.ticker, 
-    quantity: pos.quantity,
-    avgPrice: pos.averagePrice,
-    currentPrice: pos.currentPrice,
-    marketValue: pos.quantity * pos.currentPrice,
-    profitLoss: pos.ppl,
-    owner: 'Addi',
-    broker: 'Trading 212'
-  }));
+  
+  const t212Positions = positionsRes.data.map(pos => {
+    const symbol = getYahooTicker(pos.instrument?.ticker, pos.instrument?.isin);
+    const quantity = parseFloat(pos.quantity || 0);
+    const avgPrice = parseFloat(pos.averagePricePaid || 0);
+    const currentPrice = parseFloat(pos.currentPrice || 0);
+    const profitLoss = parseFloat(pos.walletImpact?.unrealizedProfitLoss || 0);
+    
+    return {
+      symbol,
+      name: pos.instrument?.name || symbol,
+      quantity,
+      avgPrice,
+      currentPrice,
+      marketValue: quantity * currentPrice,
+      profitLoss,
+      owner: 'Addi',
+      broker: 'Trading 212'
+    };
+  });
 
   // 3. Fetch transactions (Latest page)
   const transactionsRes = await axios.get(`${baseUrl}/equity/history/transactions`, { 
@@ -294,7 +321,7 @@ async function fetchTrading212() {
     id: tx.id,
     date: tx.dateTime.split('T')[0],
     type: tx.type === 'MARKET_BUY' || tx.type === 'LIMIT_BUY' ? 'BUY' : 'SELL',
-    symbol: tx.ticker,
+    symbol: getYahooTicker(tx.ticker),
     qty: tx.quantity,
     price: tx.price,
     amount: tx.total,
@@ -358,17 +385,39 @@ async function fetchIBKR() {
   const openPositionsNode = flexStatement.OpenPositions?.OpenPosition;
   if (openPositionsNode) {
     const rawPositions = Array.isArray(openPositionsNode) ? openPositionsNode : [openPositionsNode];
-    ibkrPositions = rawPositions.map(pos => ({
-      symbol: pos.symbol,
-      name: pos.description,
-      quantity: parseFloat(pos.position),
-      avgPrice: parseFloat(pos.markPrice), // or costBasisMoney / position
-      currentPrice: parseFloat(pos.markPrice),
-      marketValue: parseFloat(pos.position) * parseFloat(pos.markPrice),
-      profitLoss: parseFloat(pos.position) * (parseFloat(pos.markPrice) - (parseFloat(pos.costBasisMoney) / parseFloat(pos.position))),
-      owner: 'Matt',
-      broker: 'Interactive Brokers'
-    }));
+    ibkrPositions = rawPositions.map(pos => {
+      const symbol = getYahooTicker(pos.symbol, pos.isin);
+      const fxRate = parseFloat(pos.fxRateToBase || 1);
+      const quantity = parseFloat(pos.position || 0);
+      const markPrice = parseFloat(pos.markPrice || 0);
+      const costBasisMoney = parseFloat(pos.costBasisMoney || 0);
+      const positionValue = parseFloat(pos.positionValue || (quantity * markPrice));
+      
+      const currentPriceUSD = markPrice * fxRate;
+      const marketValueUSD = positionValue * fxRate;
+      
+      // Calculate average buy price (cost basis per share) converted to USD
+      let avgPriceUSD = 0;
+      if (costBasisMoney > 0 && quantity > 0) {
+        avgPriceUSD = (costBasisMoney / quantity) * fxRate;
+      } else {
+        avgPriceUSD = currentPriceUSD; // Fallback
+      }
+      
+      const profitLossUSD = marketValueUSD - (quantity * avgPriceUSD);
+
+      return {
+        symbol,
+        name: pos.description || symbol,
+        quantity,
+        avgPrice: avgPriceUSD,
+        currentPrice: currentPriceUSD,
+        marketValue: marketValueUSD,
+        profitLoss: profitLossUSD,
+        owner: 'Matt',
+        broker: 'Interactive Brokers'
+      };
+    });
   }
 
   // Parse Trades (Transactions)
@@ -376,17 +425,25 @@ async function fetchIBKR() {
   const tradesNode = flexStatement.Trades?.Trade;
   if (tradesNode) {
     const rawTrades = Array.isArray(tradesNode) ? tradesNode : [tradesNode];
-    ibkrTrades = rawTrades.map(tr => ({
-      id: tr.tradeID || tr.ibOrderID,
-      date: tr.tradeDate,
-      type: tr.buySell, // 'BUY' or 'SELL'
-      symbol: tr.symbol,
-      qty: Math.abs(parseFloat(tr.quantity)),
-      price: parseFloat(tr.tradePrice),
-      amount: Math.abs(parseFloat(tr.netCash)),
-      owner: 'Matt',
-      broker: 'Interactive Brokers'
-    }));
+    ibkrTrades = rawTrades.map(tr => {
+      const symbol = getYahooTicker(tr.symbol, tr.isin);
+      const fxRate = parseFloat(tr.fxRateToBase || 1);
+      const quantity = Math.abs(parseFloat(tr.quantity || 0));
+      const tradePrice = parseFloat(tr.tradePrice || 0);
+      const netCash = Math.abs(parseFloat(tr.netCash || (quantity * tradePrice)));
+
+      return {
+        id: tr.tradeID || tr.ibOrderID || `ib-${Date.now()}-${Math.random()}`,
+        date: tr.tradeDate,
+        type: tr.buySell, // 'BUY' or 'SELL'
+        symbol,
+        qty: quantity,
+        price: tradePrice * fxRate,
+        amount: netCash * fxRate,
+        owner: 'Matt',
+        broker: 'Interactive Brokers'
+      };
+    });
   }
 
   // Parse NAV history (Performance)
@@ -396,7 +453,7 @@ async function fetchIBKR() {
     const rawNavs = Array.isArray(navNode) ? navNode : [navNode];
     ibkrNAVHistory = rawNavs.map(nav => ({
       date: nav.reportDate,
-      value: parseFloat(nav.endingValue) // ending total Net Asset Value on date
+      value: parseFloat(nav.endingValue) // ending total Net Asset Value on date (already in base currency, USD)
     }));
   }
 
