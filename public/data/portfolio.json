@@ -1,124 +1,156 @@
 {
   "summary": {
-    "totalValue": 108934.05059814453,
-    "mattValue": 45426.450119018555,
-    "addiValue": 63507.60047912598,
+    "totalValue": null,
+    "mattValue": null,
+    "addiValue": 56219.8576816332,
     "manualValue": 0,
-    "cashBalance": 6500,
-    "dailyChange": 1307.2086071777344,
-    "dailyChangePercent": 1.2,
-    "lastUpdated": "2026-06-09T23:01:49.200Z"
+    "cashBalance": 0,
+    "dailyChange": null,
+    "dailyChangePercent": 0.5,
+    "lastUpdated": "2026-06-09T23:06:38.979Z"
   },
   "positions": [
     {
-      "symbol": "AAPL",
-      "name": "Apple Inc.",
+      "quantity": 997.46389843,
+      "currentPrice": 7.24,
+      "marketValue": 7221.6386246332,
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
       "quantity": 50,
-      "avgPrice": 172.5,
-      "currentPrice": 301.5400085449219,
-      "marketValue": 15077.000427246094,
-      "profitLoss": 6452.000427246094,
-      "owner": "Matt",
-      "broker": "Interactive Brokers"
-    },
-    {
-      "symbol": "MSFT",
-      "name": "Microsoft Corp.",
-      "quantity": 35,
-      "avgPrice": 340.2,
-      "currentPrice": 411.739990234375,
-      "marketValue": 14410.899658203125,
-      "profitLoss": 2503.8996582031255,
-      "owner": "Matt",
-      "broker": "Interactive Brokers"
-    },
-    {
-      "symbol": "VUSA.L",
-      "name": "Vanguard S&P 500 UCITS ETF",
-      "quantity": 110,
-      "avgPrice": 68.8,
-      "currentPrice": 105.80500030517578,
-      "marketValue": 11638.550033569336,
-      "profitLoss": 4070.5500335693364,
-      "owner": "Matt",
-      "broker": "Interactive Brokers"
-    },
-    {
-      "symbol": "TSLA",
-      "name": "Tesla Inc.",
-      "quantity": 45,
-      "avgPrice": 195.4,
-      "currentPrice": 408.95001220703125,
-      "marketValue": 18402.750549316406,
-      "profitLoss": 9609.750549316406,
+      "currentPrice": 340,
+      "marketValue": 17000,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
-      "symbol": "NVDA",
-      "name": "NVIDIA Corp.",
-      "quantity": 160,
-      "avgPrice": 65.5,
-      "currentPrice": 208.63999938964844,
-      "marketValue": 33382.39990234375,
-      "profitLoss": 22902.39990234375,
+      "quantity": 11.83,
+      "currentPrice": 819.12,
+      "marketValue": 9690.1896,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
-      "symbol": "VUSA.L",
-      "name": "Vanguard S&P 500 UCITS ETF",
-      "quantity": 90,
-      "avgPrice": 70.2,
-      "currentPrice": 105.80500030517578,
-      "marketValue": 9522.45002746582,
-      "profitLoss": 3204.45002746582,
+      "quantity": 6.5899935,
+      "currentPrice": 1622,
+      "marketValue": 10688.969457000001,
       "owner": "Addi",
       "broker": "Trading 212"
+    },
+    {
+      "quantity": 153,
+      "currentPrice": 13.26,
+      "marketValue": 2028.78,
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "quantity": 233,
+      "currentPrice": 41.16,
+      "marketValue": 9590.279999999999,
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "quantity": null,
+      "avgPrice": null,
+      "currentPrice": null,
+      "marketValue": null,
+      "profitLoss": null,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
     }
   ],
   "transactions": [
     {
-      "id": "t1",
-      "date": "2026-01-10",
+      "id": "t10",
+      "date": "2026-05-30",
       "type": "BUY",
       "symbol": "VUSA.L",
-      "qty": 100,
-      "price": 67.5,
-      "amount": 6750,
+      "qty": 10,
+      "price": 75.3,
+      "amount": 753,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     },
     {
-      "id": "t2",
-      "date": "2026-01-20",
-      "type": "BUY",
-      "symbol": "VUSA.L",
-      "qty": 90,
-      "price": 68.1,
-      "amount": 6129,
+      "id": "t9",
+      "date": "2026-05-25",
+      "type": "SELL",
+      "symbol": "AAPL",
+      "qty": 10,
+      "price": 185,
+      "amount": 1850,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "date": "2026-05-21",
+      "type": "SELL",
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
-      "id": "t3",
-      "date": "2026-02-09",
+      "id": "t8",
+      "date": "2026-05-10",
+      "type": "BUY",
+      "symbol": "NVDA",
+      "qty": 60,
+      "price": 71.33,
+      "amount": 4280,
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "id": "t7",
+      "date": "2026-04-25",
       "type": "BUY",
       "symbol": "AAPL",
-      "qty": 30,
-      "price": 170,
-      "amount": 5100,
+      "qty": 20,
+      "price": 176.25,
+      "amount": 3525,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     },
     {
-      "id": "t4",
-      "date": "2026-03-01",
+      "id": "t6",
+      "date": "2026-04-10",
       "type": "BUY",
-      "symbol": "TSLA",
-      "qty": 45,
-      "price": 195.4,
-      "amount": 8793,
+      "symbol": "MSFT",
+      "qty": 35,
+      "price": 340.2,
+      "amount": 11907,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "date": "2026-03-25",
+      "type": "SELL",
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "date": "2026-03-25",
+      "type": "SELL",
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "date": "2026-03-23",
+      "type": "SELL",
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "date": "2026-03-22",
+      "type": "SELL",
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "date": "2026-03-22",
+      "type": "SELL",
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -134,57 +166,67 @@
       "broker": "Trading 212"
     },
     {
-      "id": "t6",
-      "date": "2026-04-10",
+      "id": "t4",
+      "date": "2026-03-01",
       "type": "BUY",
-      "symbol": "MSFT",
-      "qty": 35,
-      "price": 340.2,
-      "amount": 11907,
-      "owner": "Matt",
-      "broker": "Interactive Brokers"
-    },
-    {
-      "id": "t7",
-      "date": "2026-04-25",
-      "type": "BUY",
-      "symbol": "AAPL",
-      "qty": 20,
-      "price": 176.25,
-      "amount": 3525,
-      "owner": "Matt",
-      "broker": "Interactive Brokers"
-    },
-    {
-      "id": "t8",
-      "date": "2026-05-10",
-      "type": "BUY",
-      "symbol": "NVDA",
-      "qty": 60,
-      "price": 71.33,
-      "amount": 4280,
+      "symbol": "TSLA",
+      "qty": 45,
+      "price": 195.4,
+      "amount": 8793,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
-      "id": "t9",
-      "date": "2026-05-25",
-      "type": "SELL",
+      "id": "t3",
+      "date": "2026-02-09",
+      "type": "BUY",
       "symbol": "AAPL",
-      "qty": 10,
-      "price": 185,
-      "amount": 1850,
+      "qty": 30,
+      "price": 170,
+      "amount": 5100,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     },
     {
-      "id": "t10",
-      "date": "2026-05-30",
+      "id": "t2",
+      "date": "2026-01-20",
       "type": "BUY",
       "symbol": "VUSA.L",
-      "qty": 10,
-      "price": 75.3,
-      "amount": 753,
+      "qty": 90,
+      "price": 68.1,
+      "amount": 6129,
+      "owner": "Addi",
+      "broker": "Trading 212"
+    },
+    {
+      "id": "t1",
+      "date": "2026-01-10",
+      "type": "BUY",
+      "symbol": "VUSA.L",
+      "qty": 100,
+      "price": 67.5,
+      "amount": 6750,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "qty": null,
+      "price": null,
+      "amount": null,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "qty": null,
+      "price": null,
+      "amount": null,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "qty": null,
+      "price": null,
+      "amount": null,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -5171,6 +5213,7 @@
         "date": "2026-06-09",
         "close": 1637.8399658203125
       }
-    ]
+    ],
+    "undefined": []
   }
 }
