@@ -59,6 +59,52 @@ const getYahooTicker = (symbol, isin) => {
 };
 
 /**
+ * Finds the price for a symbol on a specific date, carrying forward the last known price
+ * if the exact date is not present (e.g. weekends, holidays).
+ */
+const getPriceOnDate = (symbol, dateStr, historicalPrices, fallbackPrice) => {
+  const hist = historicalPrices[symbol];
+  if (!hist || hist.length === 0) {
+    return fallbackPrice;
+  }
+  
+  let price = fallbackPrice;
+  for (const entry of hist) {
+    if (entry.date <= dateStr) {
+      price = entry.close;
+    } else {
+      break;
+    }
+  }
+  return price;
+};
+
+/**
+ * Calculates the quantity of a position held on a specific date by walking backward from the current quantity.
+ * This handles transaction history truncation gracefully, since we anchor to the exact current position.
+ */
+const getQtyOnDate = (pos, dateStr, transactions) => {
+  let qty = pos.quantity;
+  // Get all transactions for this symbol and owner that happened AFTER the dateStr
+  // Walk backward: reverse the effect of future transactions
+  const futureTransactions = transactions.filter(t => 
+    t.symbol === pos.symbol && 
+    t.owner === pos.owner && 
+    t.date > dateStr
+  );
+  
+  for (const t of futureTransactions) {
+    if (t.type === 'BUY') {
+      qty -= t.qty;
+    } else if (t.type === 'SELL') {
+      qty += t.qty;
+    }
+  }
+  
+  return Math.max(0, qty);
+};
+
+/**
  * Generates high-fidelity mock data if no API keys are provided.
  * Serves as a perfect fallback for local development or demo purposes.
  */
@@ -223,23 +269,8 @@ async function generateMockData() {
     // Determine which holdings were active on this date
     // Simple simulation: scale back values based on historical stock prices
     positions.forEach(pos => {
-      const hist = historicalPrices[pos.symbol];
-      const priceOnDate = hist.find(h => h.date === dateStr)?.close || pos.avgPrice;
-      
-      // Check if trade had happened
-      const tradesForAsset = transactions.filter(t => t.symbol === pos.symbol && t.date <= dateStr);
-      let qtyOnDate = 0;
-      tradesForAsset.forEach(t => {
-        if (t.owner === pos.owner) {
-          if (t.type === 'BUY') qtyOnDate += t.qty;
-          else if (t.type === 'SELL') qtyOnDate -= t.qty;
-        }
-      });
-      
-      // Default fallback if we haven't mapped all trades
-      if (qtyOnDate === 0 && d.getTime() > today.getTime() - 60 * 24 * 60 * 60 * 1000) {
-        qtyOnDate = pos.quantity;
-      }
+      const priceOnDate = getPriceOnDate(pos.symbol, dateStr, historicalPrices, pos.avgPrice);
+      const qtyOnDate = getQtyOnDate(pos, dateStr, transactions);
       
       if (pos.owner === 'Matt') {
         mattVal += qtyOnDate * priceOnDate;
@@ -496,8 +527,19 @@ async function build() {
     let cachedData = null;
     if (fs.existsSync(OUTPUT_FILE)) {
       try {
-        cachedData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
-        console.log('Successfully loaded cached portfolio data to merge.');
+        const rawCache = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+        // Check if cache contains mock data (e.g. Matt's mock AAPL position or transaction IDs like t1-t10)
+        const hasMockData = rawCache.positions?.some(p => 
+          (p.owner === 'Matt' && p.symbol === 'AAPL' && p.avgPrice === 172.50) ||
+          (p.owner === 'Addi' && p.symbol === 'TSLA' && p.avgPrice === 195.40)
+        ) || rawCache.transactions?.some(tx => tx.id && String(tx.id).startsWith('t') && !isNaN(Number(String(tx.id).slice(1))));
+
+        if (hasMockData) {
+          console.log('Cached portfolio contains mock data. Discarding cache to start fresh with real data.');
+        } else {
+          cachedData = rawCache;
+          console.log('Successfully loaded cached portfolio data to merge.');
+        }
       } catch (e) {
         console.warn('Failed to parse cached portfolio file. Starting fresh.', e.message);
       }
@@ -542,33 +584,53 @@ async function build() {
       }
     }
 
-    // Build collective NAV performance history
-    const newPerformance = [];
-    const dates = [...new Set(ibkr.navHistory.map(n => n.date))];
-    dates.sort();
+    // Sort IBKR NAV history chronologically
+    ibkr.navHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
 
+    // Determine start date for history (earliest IBKR NAV date, or 6 months ago)
+    let navStartDate = new Date();
+    navStartDate.setMonth(today.getMonth() - 6);
+    if (ibkr.navHistory.length > 0) {
+      const earliestIBKRDate = new Date(Math.min(...ibkr.navHistory.map(n => new Date(n.date))));
+      if (!isNaN(earliestIBKRDate.getTime())) {
+        navStartDate = earliestIBKRDate;
+      }
+    }
+
+    // Generate continuous daily list of calendar dates up to today
+    const dates = [];
+    let current = new Date(navStartDate);
+    const end = new Date(today);
+    current.setHours(0, 0, 0, 0);
+    end.setHours(0, 0, 0, 0);
+    while (current <= end) {
+      dates.push(getDateString(current));
+      current.setDate(current.getDate() + 1);
+    }
+
+    // Helper to get IBKR NAV on date with carry-forward
+    const getIBKRNAVOnDate = (dateStr) => {
+      let val = 0;
+      for (const entry of ibkr.navHistory) {
+        if (entry.date <= dateStr) {
+          val = entry.value;
+        } else {
+          break;
+        }
+      }
+      return val;
+    };
+
+    // Build collective daily NAV performance history
+    const newPerformance = [];
     dates.forEach(date => {
-      const ibkrVal = ibkr.navHistory.find(n => n.date === date)?.value || 0;
+      const ibkrVal = getIBKRNAVOnDate(date);
       
       // Simulate/reconstruct T212 NAV history on this date
       let t212Val = 0;
       t212.positions.forEach(pos => {
-        const hist = historicalPrices[pos.symbol] || [];
-        const priceOnDate = hist.find(h => h.date === date)?.close || pos.avgPrice;
-        
-        // Sum quantity up to this date
-        let qtyOnDate = 0;
-        t212.transactions
-          .filter(t => t.symbol === pos.symbol && t.date <= date)
-          .forEach(t => {
-            if (t.type === 'BUY') qtyOnDate += t.qty;
-            else if (t.type === 'SELL') qtyOnDate -= t.qty;
-          });
-
-        if (qtyOnDate === 0 && new Date(date) > new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000)) {
-          qtyOnDate = pos.quantity;
-        }
-
+        const priceOnDate = getPriceOnDate(pos.symbol, date, historicalPrices, pos.avgPrice);
+        const qtyOnDate = getQtyOnDate(pos, date, t212.transactions);
         t212Val += qtyOnDate * priceOnDate;
       });
 
