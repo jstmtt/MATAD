@@ -272,6 +272,7 @@ async function fetchTrading212() {
 
   // 2. Fetch positions
   const positionsRes = await axios.get(`${baseUrl}/equity/positions`, { headers });
+  console.log("Trading 212 raw position sample:", JSON.stringify(positionsRes.data[0] || {}));
   const t212Positions = positionsRes.data.map(pos => ({
     symbol: pos.ticker, // e.g., AAPL_US -> needs mapping or normalization
     name: pos.ticker, 
@@ -322,7 +323,7 @@ async function fetchIBKR() {
   });
   
   // Parse Reference Code XML
-  const xmlParser = new xml2js.Parser({ explicitArray: false });
+  const xmlParser = new xml2js.Parser({ explicitArray: false, mergeAttrs: true });
   const requestData = await xmlParser.parseStringPromise(requestRes.data);
   
   if (requestData.FlexStatementResponse?.Status === 'Fail') {
@@ -350,6 +351,8 @@ async function fetchIBKR() {
     throw new Error('IBKR FlexStatement response was empty or malformed');
   }
 
+  console.log("IBKR raw OpenPositions node:", JSON.stringify(flexStatement.OpenPositions || {}));
+  
   // Parse Open Positions
   let ibkrPositions = [];
   const openPositionsNode = flexStatement.OpenPositions?.OpenPosition;
