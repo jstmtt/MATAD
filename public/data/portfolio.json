@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": null,
-    "mattValue": null,
-    "addiValue": 56219.8576816332,
+    "totalValue": 70098.0183682132,
+    "mattValue": 13857,
+    "addiValue": 56241.0183682132,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": null,
+    "dailyChange": 350.49009184106603,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-06-09T23:06:38.979Z"
+    "lastUpdated": "2026-06-09T23:14:56.427Z"
   },
   "positions": [
     {
@@ -19,22 +19,22 @@
     },
     {
       "quantity": 50,
-      "currentPrice": 340,
-      "marketValue": 17000,
+      "currentPrice": 342,
+      "marketValue": 17100,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
       "quantity": 11.83,
-      "currentPrice": 819.12,
-      "marketValue": 9690.1896,
+      "currentPrice": 818.3,
+      "marketValue": 9680.489,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
       "quantity": 6.5899935,
-      "currentPrice": 1622,
-      "marketValue": 10688.969457000001,
+      "currentPrice": 1608.68,
+      "marketValue": 10601.19074358,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,17 +47,19 @@
     },
     {
       "quantity": 233,
-      "currentPrice": 41.16,
-      "marketValue": 9590.279999999999,
+      "currentPrice": 41.24,
+      "marketValue": 9608.92,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
-      "quantity": null,
-      "avgPrice": null,
-      "currentPrice": null,
-      "marketValue": null,
-      "profitLoss": null,
+      "symbol": "SIVE",
+      "name": "SIVERS SEMICONDUCTORS AB",
+      "quantity": 155,
+      "avgPrice": 89.4,
+      "currentPrice": 89.4,
+      "marketValue": 13857,
+      "profitLoss": 13857,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -227,6 +229,39 @@
       "qty": null,
       "price": null,
       "amount": null,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "9656819458",
+      "date": "2026-06-08",
+      "type": "BUY",
+      "symbol": "SIVE",
+      "qty": 155,
+      "price": 83.6,
+      "amount": 13007,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "9656819953",
+      "date": "2026-06-08",
+      "type": "SELL",
+      "symbol": "USD.SEK",
+      "qty": 5.19,
+      "price": 9.45723,
+      "amount": 0,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "9665180967",
+      "date": "2026-06-08",
+      "type": "BUY",
+      "symbol": "USD.SEK",
+      "qty": 0.00879652,
+      "price": 9.43824447,
+      "amount": 0,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -5214,6 +5249,7 @@
         "close": 1637.8399658203125
       }
     ],
-    "undefined": []
+    "undefined": [],
+    "SIVE": []
   }
 }
