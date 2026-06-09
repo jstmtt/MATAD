@@ -34,11 +34,21 @@ const getDateString = (date) => date.toISOString().split('T')[0];
 const getYahooTicker = (symbol, isin) => {
   const isinMap = {
     'SE0003917798': 'SIVE.ST', // Sivers Semiconductors (Stockholm)
-    // Add other assets here if they don't map cleanly by symbol
+    'SE0000667868': 'SAND.ST', // Sandvik AB (Stockholm)
+    'FR0000075922': 'ALRIB.PA', // Riber (Paris)
   };
   
   if (isin && isinMap[isin]) {
     return isinMap[isin];
+  }
+  
+  const tickerMap = {
+    'SNDK1': 'SAND.ST',
+    'ALRIBp': 'ALRIB.PA',
+  };
+  
+  if (symbol && tickerMap[symbol]) {
+    return tickerMap[symbol];
   }
   
   if (!symbol) return '';
@@ -448,7 +458,7 @@ async function fetchIBKR() {
 
   // Parse NAV history (Performance)
   let ibkrNAVHistory = [];
-  const navNode = flexStatement.ChangeInNAV?.NetAssetValue;
+  const navNode = flexStatement.ChangeInNAV?.NetAssetValue || flexStatement.NetAssetValue;
   if (navNode) {
     const rawNavs = Array.isArray(navNode) ? navNode : [navNode];
     ibkrNAVHistory = rawNavs.map(nav => ({

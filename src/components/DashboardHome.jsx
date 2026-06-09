@@ -60,6 +60,16 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
     }).format(val);
   };
 
+  const formatPriceUSD = (val) => {
+    if (val === undefined || val === null || isNaN(val)) return '-';
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    }).format(val);
+  };
+
   // Format percent helper
   const formatPercent = (val) => {
     return `${val >= 0 ? '+' : ''}${val.toFixed(2)}%`;
@@ -370,8 +380,8 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
                       </span>
                     </td>
                     <td style={{ fontWeight: 500 }}>{pos.quantity}</td>
-                    <td>{formatUSD(pos.avgPrice)}</td>
-                    <td>{formatUSD(pos.currentPrice)}</td>
+                    <td>{formatPriceUSD(pos.avgPrice)}</td>
+                    <td>{formatPriceUSD(pos.currentPrice)}</td>
                     <td style={{ fontWeight: 600 }}>{formatUSD(pos.marketValue)}</td>
                     <td>
                       <span style={{
@@ -381,7 +391,7 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
                         alignItems: 'center',
                         gap: '4px'
                       }}>
-                        {isProfit ? '+' : ''}{formatUSD(pos.profitLoss)}
+                        {isProfit ? '+' : ''}{formatPriceUSD(pos.profitLoss)}
                         <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>
                           ({isProfit ? '+' : ''}{plPct.toFixed(1)}%)
                         </span>
