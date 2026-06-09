@@ -105,6 +105,17 @@ const getQtyOnDate = (pos, dateStr, transactions) => {
 };
 
 /**
+ * Maps a Yahoo Finance ticker symbol to its native currency.
+ */
+const getSymbolCurrency = (symbol) => {
+  if (!symbol) return 'USD';
+  if (symbol.endsWith('.ST')) return 'SEK';
+  if (symbol.endsWith('.PA')) return 'EUR';
+  if (symbol.endsWith('.L')) return 'GBP';
+  return 'USD';
+};
+
+/**
  * Generates high-fidelity mock data if no API keys are provided.
  * Serves as a perfect fallback for local development or demo purposes.
  */
@@ -349,7 +360,8 @@ async function fetchTrading212() {
       marketValue: quantity * currentPrice,
       profitLoss,
       owner: 'Addi',
-      broker: 'Trading 212'
+      broker: 'Trading 212',
+      walletImpact: pos.walletImpact
     };
   });
 
@@ -358,17 +370,19 @@ async function fetchTrading212() {
     headers, 
     params: { limit: 50 } 
   });
-  const t212Transactions = transactionsRes.data.items.map(tx => ({
-    id: tx.id,
-    date: tx.dateTime.split('T')[0],
-    type: tx.type === 'MARKET_BUY' || tx.type === 'LIMIT_BUY' ? 'BUY' : 'SELL',
-    symbol: getYahooTicker(tx.ticker),
-    qty: tx.quantity,
-    price: tx.price,
-    amount: tx.total,
-    owner: 'Addi',
-    broker: 'Trading 212'
-  }));
+  const t212Transactions = transactionsRes.data.items
+    .filter(tx => tx.ticker)
+    .map(tx => ({
+      id: tx.id,
+      date: tx.dateTime.split('T')[0],
+      type: tx.type.includes('BUY') ? 'BUY' : 'SELL',
+      symbol: getYahooTicker(tx.ticker),
+      qty: tx.quantity,
+      price: tx.price,
+      amount: tx.total,
+      owner: 'Addi',
+      broker: 'Trading 212'
+    }));
 
   return {
     summary: t212Summary,
@@ -545,22 +559,9 @@ async function build() {
       }
     }
 
-    // Combine positions (current snapshots are replaced)
-    const aggregatedPositions = [...t212.positions, ...ibkr.positions];
-    
-    // Combine transactions & de-duplicate using unique transaction IDs
-    let aggregatedTransactions = [...t212.transactions, ...ibkr.transactions];
-    if (cachedData && cachedData.transactions) {
-      const existingTxIds = new Set(cachedData.transactions.map(tx => tx.id));
-      const newTransactions = aggregatedTransactions.filter(tx => !existingTxIds.has(tx.id));
-      aggregatedTransactions = [...cachedData.transactions, ...newTransactions];
-    }
-    
-    // Sort transactions by date descending
-    aggregatedTransactions.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    // Fetch Yahoo Finance historical data for all unique active symbols
-    const uniqueSymbols = [...new Set(aggregatedPositions.map(p => p.symbol))];
+    // Fetch Yahoo Finance historical data for all unique active symbols and exchange rates
+    const uniqueSymbols = [...new Set([...t212.positions, ...ibkr.positions].map(p => p.symbol).filter(Boolean))];
+    uniqueSymbols.push('USDSEK=X', 'USDEUR=X', 'USDGBP=X');
     const historicalPrices = {};
     const today = new Date();
     const startDate = new Date();
@@ -583,6 +584,80 @@ async function build() {
         historicalPrices[symbol] = [];
       }
     }
+
+    // Extract current exchange rates (last close of the historical series)
+    const currentPrices = {
+      'USDGBP=X': historicalPrices['USDGBP=X']?.slice(-1)[0]?.close || 0.78,
+      'USDEUR=X': historicalPrices['USDEUR=X']?.slice(-1)[0]?.close || 0.92,
+      'USDSEK=X': historicalPrices['USDSEK=X']?.slice(-1)[0]?.close || 10.5
+    };
+
+    // Normalize T212 positions to USD using current FX rates
+    const normalizedT212Positions = t212.positions.map(pos => {
+      const walletCurrency = pos.walletImpact?.currency || 'GBP';
+      let fxRate = 1;
+      if (walletCurrency === 'GBP') {
+        fxRate = 1 / currentPrices['USDGBP=X'];
+      } else if (walletCurrency === 'EUR') {
+        fxRate = 1 / currentPrices['USDEUR=X'];
+      } else if (walletCurrency === 'SEK') {
+        fxRate = 1 / currentPrices['USDSEK=X'];
+      }
+
+      const marketValueUSD = parseFloat(pos.walletImpact?.currentValue || 0) * fxRate;
+      const costBasisUSD = parseFloat(pos.walletImpact?.totalCost || 0) * fxRate;
+      const profitLossUSD = parseFloat(pos.walletImpact?.unrealizedProfitLoss || 0) * fxRate;
+      
+      const quantity = pos.quantity;
+      const currentPriceUSD = quantity > 0 ? (marketValueUSD / quantity) : 0;
+      const avgPriceUSD = quantity > 0 ? (costBasisUSD / quantity) : 0;
+
+      return {
+        symbol: pos.symbol,
+        name: pos.name,
+        quantity,
+        avgPrice: avgPriceUSD,
+        currentPrice: currentPriceUSD,
+        marketValue: marketValueUSD,
+        profitLoss: profitLossUSD,
+        owner: pos.owner,
+        broker: pos.broker
+      };
+    });
+
+    // Normalize T212 transactions to USD using current FX rates
+    const normalizedT212Transactions = t212.transactions.map(tx => {
+      const gbpToUsd = 1 / currentPrices['USDGBP=X'];
+      const currency = getSymbolCurrency(tx.symbol);
+      let priceUSD = tx.price;
+      if (currency === 'SEK') {
+        priceUSD = tx.price / currentPrices['USDSEK=X'];
+      } else if (currency === 'EUR') {
+        priceUSD = tx.price / currentPrices['USDEUR=X'];
+      } else if (currency === 'GBP') {
+        priceUSD = tx.price / currentPrices['USDGBP=X'];
+      }
+
+      return {
+        ...tx,
+        price: priceUSD,
+        amount: tx.amount * gbpToUsd
+      };
+    });
+
+    // Combine positions (current snapshots are replaced)
+    const aggregatedPositions = [...normalizedT212Positions, ...ibkr.positions];
+    
+    // Combine transactions & de-duplicate using unique transaction IDs
+    let aggregatedTransactions = [...normalizedT212Transactions, ...ibkr.transactions];
+    if (cachedData && cachedData.transactions) {
+      const existingTxIds = new Set(cachedData.transactions.map(tx => tx.id));
+      const newTransactions = aggregatedTransactions.filter(tx => !existingTxIds.has(tx.id));
+      aggregatedTransactions = [...cachedData.transactions, ...newTransactions];
+    }
+    
+    // Sort transactions by date descending
+    aggregatedTransactions.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // Sort IBKR NAV history chronologically
     ibkr.navHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -631,7 +706,24 @@ async function build() {
       t212.positions.forEach(pos => {
         const priceOnDate = getPriceOnDate(pos.symbol, date, historicalPrices, pos.avgPrice);
         const qtyOnDate = getQtyOnDate(pos, date, t212.transactions);
-        t212Val += qtyOnDate * priceOnDate;
+        const valInCurrency = qtyOnDate * priceOnDate;
+        
+        // Convert to USD based on the symbol's native currency on this historical date
+        const currency = getSymbolCurrency(pos.symbol);
+        let valInUSD = valInCurrency;
+        
+        if (currency === 'SEK') {
+          const usdSekRate = getPriceOnDate('USDSEK=X', date, historicalPrices, 10.5);
+          valInUSD = valInCurrency / usdSekRate;
+        } else if (currency === 'EUR') {
+          const usdEurRate = getPriceOnDate('USDEUR=X', date, historicalPrices, 0.92);
+          valInUSD = valInCurrency / usdEurRate;
+        } else if (currency === 'GBP') {
+          const usdGbpRate = getPriceOnDate('USDGBP=X', date, historicalPrices, 0.78);
+          valInUSD = valInCurrency / usdGbpRate;
+        }
+        
+        t212Val += valInUSD;
       });
 
       newPerformance.push({
@@ -654,7 +746,7 @@ async function build() {
 
     // Summary calculations
     const mattTotal = ibkr.positions.reduce((sum, p) => sum + p.marketValue, 0);
-    const addiTotal = t212.positions.reduce((sum, p) => sum + p.marketValue, 0);
+    const addiTotal = normalizedT212Positions.reduce((sum, p) => sum + p.marketValue, 0);
     const totalVal = mattTotal + addiTotal;
 
     const summary = {
@@ -662,7 +754,7 @@ async function build() {
       mattValue: mattTotal,
       addiValue: addiTotal,
       manualValue: 0,
-      cashBalance: (t212.summary?.free || 0),
+      cashBalance: (t212.summary?.free || 0) / (currentPrices['USDGBP=X'] || 1),
       dailyChange: totalVal * 0.005,
       dailyChangePercent: 0.5,
       lastUpdated: new Date().toISOString()
