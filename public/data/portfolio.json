@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": 57678.136833633194,
+    "totalValue": 57601.7481271332,
     "mattValue": 1468.8419999999999,
-    "addiValue": 56209.2948336332,
+    "addiValue": 56132.9061271332,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 288.390684168166,
+    "dailyChange": 288.008740635666,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-06-09T23:22:46.889Z"
+    "lastUpdated": "2026-06-09T23:29:17.415Z"
   },
   "positions": [
     {
@@ -17,7 +17,7 @@
       "avgPrice": 6.94474257,
       "currentPrice": 7.24,
       "marketValue": 7221.6386246332,
-      "profitLoss": 243.49,
+      "profitLoss": 243.71,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -26,9 +26,9 @@
       "name": "Astera Labs",
       "quantity": 50,
       "avgPrice": 216.91,
-      "currentPrice": 340.2,
-      "marketValue": 17010,
-      "profitLoss": 4712.4,
+      "currentPrice": 339.45,
+      "marketValue": 16972.5,
+      "profitLoss": 4686.35,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -37,9 +37,9 @@
       "name": "Lumentum",
       "quantity": 11.83,
       "avgPrice": 902,
-      "currentPrice": 818.49,
-      "marketValue": 9682.7367,
-      "profitLoss": -696.52,
+      "currentPrice": 817.6,
+      "marketValue": 9672.208,
+      "profitLoss": -703.26,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -48,9 +48,9 @@
       "name": "Sandisk",
       "quantity": 6.5899935,
       "avgPrice": 1575.20033973,
-      "currentPrice": 1614,
-      "marketValue": 10636.249509000001,
-      "profitLoss": 165.7,
+      "currentPrice": 1615,
+      "marketValue": 10642.8395025,
+      "profitLoss": 171.88,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -61,7 +61,7 @@
       "avgPrice": 15.28,
       "currentPrice": 13.26,
       "marketValue": 2028.78,
-      "profitLoss": -274.53,
+      "profitLoss": -274.47,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -70,9 +70,9 @@
       "name": "Applied Digital",
       "quantity": 233,
       "avgPrice": 46.14,
-      "currentPrice": 41.33,
-      "marketValue": 9629.89,
-      "profitLoss": -796.06,
+      "currentPrice": 41.18,
+      "marketValue": 9594.94,
+      "profitLoss": -821.07,
       "owner": "Addi",
       "broker": "Trading 212"
     },
