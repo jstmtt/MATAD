@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Color Palette (HSL) */
+  --bg-color: 224, 71%, 4%;
+  --card-bg: 224, 40%, 8%, 0.6;
+  --card-border: 224, 30%, 15%;
+  --card-hover-border: 250, 84%, 67%, 0.4;
+  
+  --text-primary: 220, 40%, 95%;
+  --text-secondary: 220, 20%, 65%;
+  --text-muted: 220, 15%, 45%;
+  
+  --primary: 250, 84%, 67%;
+  --primary-glow: 250, 84%, 67%, 0.15;
+  --accent: 180, 80%, 55%;
+  --accent-glow: 180, 80%, 55%, 0.15;
+  
+  --success: 145, 80%, 45%;
+  --success-bg: 145, 80%, 45%, 0.1;
+  --danger: 343, 85%, 60%;
+  --danger-bg: 343, 85%, 60%, 0.1;
+  --warning: 25, 90%, 55%;
+  --warning-bg: 25, 90%, 55%, 0.1;
+  
+  /* Layout */
+  --sidebar-width: 260px;
+  --header-height: 70px;
+  
+  /* Fonts */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(var(--bg-color));
+  color: hsl(var(--text-primary));
+  font-family: var(--font-body);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-color));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--card-border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Typography Utility */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: rgba(8, 12, 24, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all var(--transition-normal);
+}
+
+.glass-panel:hover {
+  border-color: rgba(120, 119, 198, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: hsl(var(--text-primary));
+  font-family: var(--font-body);
+  padding: 10px 14px;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.glass-input:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary-glow));
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.glass-button {
+  background: hsl(var(--primary));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.glass-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px hsl(var(--primary-glow));
+  filter: brightness(1.1);
+}
+
+.glass-button:active {
+  transform: translateY(0);
+}
+
+.glass-button.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: hsl(var(--text-primary));
+}
+
+.glass-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
