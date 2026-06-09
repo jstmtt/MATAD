@@ -342,9 +342,11 @@ async function fetchIBKR() {
   });
 
   const statementData = await xmlParser.parseStringPromise(statementRes.data);
-  const flexStatement = statementData.FlexStatementResponse?.FlexStatements?.FlexStatement;
+  const flexStatement = (statementData.FlexQueryResponse || statementData.FlexStatementResponse)?.FlexStatements?.FlexStatement;
   
   if (!flexStatement) {
+    // Log the parsed keys for easier debugging in Actions logs if it fails again
+    console.warn("Parsed XML keys:", Object.keys(statementData));
     throw new Error('IBKR FlexStatement response was empty or malformed');
   }
 
