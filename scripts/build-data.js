@@ -433,6 +433,7 @@ async function fetchIBKR() {
     throw new Error('IBKR FlexStatement response was empty or malformed');
   }
 
+  console.log("IBKR FlexStatement sections present:", Object.keys(flexStatement));
   console.log("IBKR raw OpenPositions node:", JSON.stringify(flexStatement.OpenPositions || {}));
   
   // Parse Open Positions
@@ -699,7 +700,33 @@ async function build() {
     // Build collective daily NAV performance history
     const newPerformance = [];
     dates.forEach(date => {
-      const ibkrVal = getIBKRNAVOnDate(date);
+      let ibkrVal = 0;
+      if (ibkr.navHistory && ibkr.navHistory.length > 0) {
+        ibkrVal = getIBKRNAVOnDate(date);
+      } else {
+        // Reconstruct Matt's IBKR history on this date if navHistory is empty
+        ibkr.positions.forEach(pos => {
+          const priceOnDate = getPriceOnDate(pos.symbol, date, historicalPrices, pos.avgPrice);
+          const qtyOnDate = getQtyOnDate(pos, date, ibkr.transactions);
+          const valInCurrency = qtyOnDate * priceOnDate;
+          
+          const currency = getSymbolCurrency(pos.symbol);
+          let valInUSD = valInCurrency;
+          
+          if (currency === 'SEK') {
+            const usdSekRate = getPriceOnDate('USDSEK=X', date, historicalPrices, 10.5);
+            valInUSD = valInCurrency / usdSekRate;
+          } else if (currency === 'EUR') {
+            const usdEurRate = getPriceOnDate('USDEUR=X', date, historicalPrices, 0.92);
+            valInUSD = valInCurrency / usdEurRate;
+          } else if (currency === 'GBP') {
+            const usdGbpRate = getPriceOnDate('USDGBP=X', date, historicalPrices, 0.78);
+            valInUSD = valInCurrency / usdGbpRate;
+          }
+          
+          ibkrVal += valInUSD;
+        });
+      }
       
       // Simulate/reconstruct T212 NAV history on this date
       let t212Val = 0;
