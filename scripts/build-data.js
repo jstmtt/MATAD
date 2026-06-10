@@ -138,19 +138,20 @@ async function generateMockData() {
   for (const ticker of tickers) {
     try {
       console.log(`Fetching Yahoo Finance historical prices for ${ticker}...`);
-      const result = await yahooFinance.historical(ticker, {
+      const result = await yahooFinance.chart(ticker, {
         period1: getDateString(startDate),
         period2: getDateString(today),
         interval: '1d'
       });
       
-      historicalPrices[ticker] = result.map(p => ({
+      const quotes = (result.quotes || []).filter(p => p.date && p.close !== null && p.close !== undefined);
+      historicalPrices[ticker] = quotes.map(p => ({
         date: getDateString(new Date(p.date)),
         close: p.close
       }));
       
       // Get current price (last close)
-      currentPrices[ticker] = result[result.length - 1]?.close || 100;
+      currentPrices[ticker] = quotes[quotes.length - 1]?.close || 100;
     } catch (err) {
       console.error(`Failed to fetch Yahoo Finance for ${ticker}, generating mock history:`, err.message);
       // Fallback historical price generation
@@ -434,6 +435,18 @@ async function fetchIBKR() {
   }
 
   console.log("IBKR FlexStatement sections present:", Object.keys(flexStatement));
+
+  // Parse Account Information to find Base Currency
+  let ibkrBaseCurrency = 'USD';
+  const accountInfoNode = flexStatement.AccountInformation || flexStatement.AccountInfo;
+  if (accountInfoNode) {
+    const rawAccounts = Array.isArray(accountInfoNode) ? accountInfoNode : [accountInfoNode];
+    const info = rawAccounts[0];
+    if (info) {
+      ibkrBaseCurrency = info.currency || info.baseCurrency || 'USD';
+    }
+  }
+  console.log("IBKR Detected Account Base Currency:", ibkrBaseCurrency);
   console.log("IBKR raw OpenPositions node:", JSON.stringify(flexStatement.OpenPositions || {}));
   
   // Parse Open Positions
@@ -507,16 +520,24 @@ async function fetchIBKR() {
   const navNode = flexStatement.ChangeInNAV?.NetAssetValue || flexStatement.NetAssetValue;
   if (navNode) {
     const rawNavs = Array.isArray(navNode) ? navNode : [navNode];
-    ibkrNAVHistory = rawNavs.map(nav => ({
+    // Filter for total account NAV rows (exclude individual Cash/Stock rows to prevent overwrite)
+    const totalNavs = rawNavs.filter(nav => {
+      const isTotalClass = !nav.assetClass || nav.assetClass.toUpperCase() === 'ALL';
+      return isTotalClass;
+    });
+    
+    ibkrNAVHistory = totalNavs.map(nav => ({
       date: nav.reportDate,
-      value: parseFloat(nav.endingValue) // ending total Net Asset Value on date (already in base currency, USD)
+      value: parseFloat(nav.endingValue)
     }));
   }
 
   return {
     positions: ibkrPositions,
     transactions: ibkrTrades,
-    navHistory: ibkrNAVHistory
+    navHistory: ibkrNAVHistory,
+    baseCurrency: ibkrBaseCurrency,
+    rawStatementKeys: Object.keys(flexStatement)
   };
 }
 
@@ -571,12 +592,13 @@ async function build() {
     for (const symbol of uniqueSymbols) {
       try {
         console.log(`Fetching Yahoo Finance historical data for active symbol: ${symbol}...`);
-        const prices = await yahooFinance.historical(symbol, {
+        const result = await yahooFinance.chart(symbol, {
           period1: getDateString(startDate),
           period2: getDateString(today),
           interval: '1d'
         });
-        historicalPrices[symbol] = prices.map(p => ({
+        const quotes = (result.quotes || []).filter(p => p.date && p.close !== null && p.close !== undefined);
+        historicalPrices[symbol] = quotes.map(p => ({
           date: getDateString(new Date(p.date)),
           close: p.close
         }));
@@ -626,6 +648,27 @@ async function build() {
       };
     });
 
+    // Normalize IBKR positions to USD using current FX rates
+    const normalizedIBKRPositions = ibkr.positions.map(pos => {
+      const currency = getSymbolCurrency(pos.symbol);
+      let fxRate = 1;
+      if (currency === 'SEK') {
+        fxRate = currentPrices['USDSEK=X'] || 10.5;
+      } else if (currency === 'EUR') {
+        fxRate = currentPrices['USDEUR=X'] || 0.92;
+      } else if (currency === 'GBP') {
+        fxRate = currentPrices['USDGBP=X'] || 0.78;
+      }
+
+      return {
+        ...pos,
+        avgPrice: pos.avgPrice / fxRate,
+        currentPrice: pos.currentPrice / fxRate,
+        marketValue: pos.marketValue / fxRate,
+        profitLoss: pos.profitLoss / fxRate
+      };
+    });
+
     // Normalize T212 transactions to USD using current FX rates
     const normalizedT212Transactions = t212.transactions.map(tx => {
       const gbpToUsd = 1 / currentPrices['USDGBP=X'];
@@ -646,11 +689,30 @@ async function build() {
       };
     });
 
+    // Normalize IBKR transactions to USD using FX rates on trade date
+    const normalizedIBKRTransactions = ibkr.transactions.map(tx => {
+      const currency = getSymbolCurrency(tx.symbol);
+      let fxRate = 1;
+      if (currency === 'SEK') {
+        fxRate = getPriceOnDate('USDSEK=X', tx.date, historicalPrices, currentPrices['USDSEK=X'] || 10.5);
+      } else if (currency === 'EUR') {
+        fxRate = getPriceOnDate('USDEUR=X', tx.date, historicalPrices, currentPrices['USDEUR=X'] || 0.92);
+      } else if (currency === 'GBP') {
+        fxRate = getPriceOnDate('USDGBP=X', tx.date, historicalPrices, currentPrices['USDGBP=X'] || 0.78);
+      }
+
+      return {
+        ...tx,
+        price: tx.price / fxRate,
+        amount: tx.amount / fxRate
+      };
+    });
+
     // Combine positions (current snapshots are replaced)
-    const aggregatedPositions = [...normalizedT212Positions, ...ibkr.positions];
+    const aggregatedPositions = [...normalizedT212Positions, ...normalizedIBKRPositions];
     
     // Combine transactions & de-duplicate using unique transaction IDs
-    let aggregatedTransactions = [...normalizedT212Transactions, ...ibkr.transactions];
+    let aggregatedTransactions = [...normalizedT212Transactions, ...normalizedIBKRTransactions];
     if (cachedData && cachedData.transactions) {
       const existingTxIds = new Set(cachedData.transactions.map(tx => tx.id));
       const newTransactions = aggregatedTransactions.filter(tx => !existingTxIds.has(tx.id));
@@ -660,14 +722,26 @@ async function build() {
     // Sort transactions by date descending
     aggregatedTransactions.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+    // Normalize IBKR NAV history to USD (in case baseCurrency is not USD)
+    const normalizedIBKRNAVHistory = ibkr.navHistory.map(nav => {
+      if (ibkr.baseCurrency === 'USD') return nav;
+      
+      const rateSymbol = `USD${ibkr.baseCurrency}=X`;
+      const rate = getPriceOnDate(rateSymbol, nav.date, historicalPrices, 10.5);
+      return {
+        ...nav,
+        value: nav.value / rate
+      };
+    });
+
     // Sort IBKR NAV history chronologically
-    ibkr.navHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
+    normalizedIBKRNAVHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     // Determine start date for history (earliest IBKR NAV date, or 6 months ago)
     let navStartDate = new Date();
     navStartDate.setMonth(today.getMonth() - 6);
-    if (ibkr.navHistory.length > 0) {
-      const earliestIBKRDate = new Date(Math.min(...ibkr.navHistory.map(n => new Date(n.date))));
+    if (normalizedIBKRNAVHistory.length > 0) {
+      const earliestIBKRDate = new Date(Math.min(...normalizedIBKRNAVHistory.map(n => new Date(n.date))));
       if (!isNaN(earliestIBKRDate.getTime())) {
         navStartDate = earliestIBKRDate;
       }
@@ -687,7 +761,7 @@ async function build() {
     // Helper to get IBKR NAV on date with carry-forward
     const getIBKRNAVOnDate = (dateStr) => {
       let val = 0;
-      for (const entry of ibkr.navHistory) {
+      for (const entry of normalizedIBKRNAVHistory) {
         if (entry.date <= dateStr) {
           val = entry.value;
         } else {
@@ -701,13 +775,13 @@ async function build() {
     const newPerformance = [];
     dates.forEach(date => {
       let ibkrVal = 0;
-      if (ibkr.navHistory && ibkr.navHistory.length > 0) {
+      if (normalizedIBKRNAVHistory && normalizedIBKRNAVHistory.length > 0) {
         ibkrVal = getIBKRNAVOnDate(date);
       } else {
         // Reconstruct Matt's IBKR history on this date if navHistory is empty
-        ibkr.positions.forEach(pos => {
+        normalizedIBKRPositions.forEach(pos => {
           const priceOnDate = getPriceOnDate(pos.symbol, date, historicalPrices, pos.avgPrice);
-          const qtyOnDate = getQtyOnDate(pos, date, ibkr.transactions);
+          const qtyOnDate = getQtyOnDate(pos, date, aggregatedTransactions);
           const valInCurrency = qtyOnDate * priceOnDate;
           
           const currency = getSymbolCurrency(pos.symbol);
@@ -732,7 +806,7 @@ async function build() {
       let t212Val = 0;
       t212.positions.forEach(pos => {
         const priceOnDate = getPriceOnDate(pos.symbol, date, historicalPrices, pos.avgPrice);
-        const qtyOnDate = getQtyOnDate(pos, date, t212.transactions);
+        const qtyOnDate = getQtyOnDate(pos, date, aggregatedTransactions);
         const valInCurrency = qtyOnDate * priceOnDate;
         
         // Convert to USD based on the symbol's native currency on this historical date
@@ -772,16 +846,26 @@ async function build() {
     }
 
     // Summary calculations
-    const mattTotal = ibkr.positions.reduce((sum, p) => sum + p.marketValue, 0);
+    const mattPositionsTotal = normalizedIBKRPositions.reduce((sum, p) => sum + p.marketValue, 0);
     const addiTotal = normalizedT212Positions.reduce((sum, p) => sum + p.marketValue, 0);
+    
+    // Matt's total value is the latest NAV from history (which contains cash + positions)
+    let mattTotal = mattPositionsTotal;
+    let mattCash = 0;
+    if (normalizedIBKRNAVHistory.length > 0) {
+      mattTotal = normalizedIBKRNAVHistory[normalizedIBKRNAVHistory.length - 1].value;
+      mattCash = Math.max(0, mattTotal - mattPositionsTotal);
+    }
+    
     const totalVal = mattTotal + addiTotal;
+    const t212Cash = (t212.summary?.free || 0) / (currentPrices['USDGBP=X'] || 1);
 
     const summary = {
       totalValue: totalVal,
       mattValue: mattTotal,
       addiValue: addiTotal,
       manualValue: 0,
-      cashBalance: (t212.summary?.free || 0) / (currentPrices['USDGBP=X'] || 1),
+      cashBalance: t212Cash + mattCash,
       dailyChange: totalVal * 0.005,
       dailyChangePercent: 0.5,
       lastUpdated: new Date().toISOString()
@@ -800,6 +884,13 @@ async function build() {
       performance,
       historicalPrices: combinedHistoricalPrices
     };
+
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'flex_sections.json'), JSON.stringify({
+      sections: ibkr.rawStatementKeys || [],
+      navHistoryLength: ibkr.navHistory?.length || 0,
+      tradesLength: ibkr.transactions?.length || 0,
+      positionsLength: ibkr.positions?.length || 0
+    }, null, 2));
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
     console.log(`Aggregated real portfolio file written and merged to ${OUTPUT_FILE}`);

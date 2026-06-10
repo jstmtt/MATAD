@@ -23,6 +23,7 @@ import {
 
 export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
   const [timeframe, setTimeframe] = useState('all'); // '30d', '90d', 'all'
+  const [logScale, setLogScale] = useState(false);
 
   if (!data) return <div style={{ padding: '20px' }}>Loading portfolio data...</div>;
 
@@ -83,6 +84,27 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
     return perf;
   };
 
+  // Log scale adapter for chart data
+  const getChartData = () => {
+    const dataList = filteredPerformance();
+    return dataList.map(p => {
+      const item = {
+        ...p,
+        _Matt: p.Matt,
+        _Addi: p.Addi,
+        _Total: p.Total,
+      };
+      
+      if (logScale) {
+        // Floor values to at least $100 so log scale functions properly
+        item.Matt = p.Matt < 100 ? 100 : p.Matt;
+        item.Addi = p.Addi < 100 ? 100 : p.Addi;
+        item.Total = p.Total < 100 ? 100 : p.Total;
+      }
+      return item;
+    });
+  };
+
   // Pie chart data for allocation (Owner Split)
   const ownerAllocationData = [
     { name: "Matt (IBKR)", value: mattVal, color: 'hsl(250, 84%, 67%)' },
@@ -93,6 +115,7 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
   // Custom Tooltip component for Recharts
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
+      const item = payload[0].payload;
       return (
         <div style={{
           background: 'rgba(8, 12, 24, 0.9)',
@@ -103,11 +126,14 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
           boxShadow: '0 8px 30px rgba(0,0,0,0.5)'
         }}>
           <p style={{ margin: '0 0 6px 0', fontSize: '0.75rem', color: 'hsl(var(--text-secondary))', fontWeight: 600 }}>{label}</p>
-          {payload.map((entry, index) => (
-            <p key={index} style={{ margin: '3px 0', fontSize: '0.85rem', color: entry.color, fontWeight: 500 }}>
-              {entry.name}: {formatUSD(entry.value)}
-            </p>
-          ))}
+          {payload.map((entry, index) => {
+            const originalVal = item[`_${entry.name}`] !== undefined ? item[`_${entry.name}`] : entry.value;
+            return (
+              <p key={index} style={{ margin: '3px 0', fontSize: '0.85rem', color: entry.color, fontWeight: 500 }}>
+                {entry.name}: {formatUSD(originalVal)}
+              </p>
+            );
+          })}
         </div>
       );
     }
@@ -195,26 +221,35 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
                 </li>
               </ul>
 
-              <div className="chart-filters">
-                <button 
-                  onClick={() => setTimeframe('30d')} 
-                  className={`chart-filter-btn ${timeframe === '30d' ? 'active' : ''}`}
-                >30D</button>
-                <button 
-                  onClick={() => setTimeframe('90d')} 
-                  className={`chart-filter-btn ${timeframe === '90d' ? 'active' : ''}`}
-                >90D</button>
-                <button 
-                  onClick={() => setTimeframe('all')} 
-                  className={`chart-filter-btn ${timeframe === 'all' ? 'active' : ''}`}
-                >ALL</button>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <div className="chart-filters">
+                  <button 
+                    onClick={() => setLogScale(!logScale)} 
+                    className={`chart-filter-btn ${logScale ? 'active' : ''}`}
+                    style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.5px' }}
+                  >LOG</button>
+                </div>
+                <div className="chart-filters">
+                  <button 
+                    onClick={() => setTimeframe('30d')} 
+                    className={`chart-filter-btn ${timeframe === '30d' ? 'active' : ''}`}
+                  >30D</button>
+                  <button 
+                    onClick={() => setTimeframe('90d')} 
+                    className={`chart-filter-btn ${timeframe === '90d' ? 'active' : ''}`}
+                  >90D</button>
+                  <button 
+                    onClick={() => setTimeframe('all')} 
+                    className={`chart-filter-btn ${timeframe === 'all' ? 'active' : ''}`}
+                  >ALL</button>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="chart-container">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={filteredPerformance()} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+              <AreaChart data={getChartData()} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorTotal" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="hsl(180, 80%, 55%)" stopOpacity={0.15}/>
@@ -233,14 +268,16 @@ export default function DashboardHome({ data, onSelectAsset, manualAssets }) {
                   dy={10} 
                   tickLine={false}
                 />
-                <YAxis 
-                  stroke="rgba(255,255,255,0.2)" 
-                  fontSize={10}
-                  dx={-10}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(val) => `$${val/1000}k`}
-                />
+                 <YAxis 
+                   stroke="rgba(255,255,255,0.2)" 
+                   fontSize={10}
+                   dx={-10}
+                   tickLine={false}
+                   axisLine={false}
+                   scale={logScale ? "log" : "auto"}
+                   domain={logScale ? [100, "auto"] : [0, "auto"]}
+                   tickFormatter={(val) => val >= 1000 ? `$${(val/1000).toFixed(0)}k` : `$${val}`}
+                 />
                 <Tooltip content={<CustomTooltip />} />
                 <Area 
                   name="Matt" 
