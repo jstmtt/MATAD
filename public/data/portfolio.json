@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 64767.42967673955,
+    "totalValue": 64770.026735200896,
     "mattValue": 161.3356987219772,
-    "addiValue": 64606.093978017576,
+    "addiValue": 64608.69103647892,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 323.83714838369775,
+    "dailyChange": 323.8501336760045,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-06-13T14:16:18.138Z"
+    "lastUpdated": "2026-06-14T04:53:33.120Z"
   },
   "positions": [
     {
       "symbol": "SIVE.ST",
       "name": "Sivers Semiconductors",
       "quantity": 1000,
-      "avgPrice": 8.046979535364096,
-      "currentPrice": 9.610972818778892,
-      "marketValue": 9610.972818778891,
-      "profitLoss": 1563.9932834147949,
+      "avgPrice": 8.0473030106743,
+      "currentPrice": 9.61135916404052,
+      "marketValue": 9611.35916404052,
+      "profitLoss": 1564.05615336622,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 214.7325291199696,
-      "currentPrice": 370.7285646077893,
-      "marketValue": 18536.428230389465,
-      "profitLoss": 7799.801774390988,
+      "avgPrice": 214.74116101360903,
+      "currentPrice": 370.7434672848634,
+      "marketValue": 18537.17336424317,
+      "profitLoss": 7800.115313562724,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "LITE",
       "name": "Lumentum",
       "quantity": 11.83,
-      "avgPrice": 899.5805288851166,
-      "currentPrice": 920.3409426291905,
-      "marketValue": 10887.633351303324,
-      "profitLoss": 245.5956945923963,
+      "avgPrice": 899.6166905392323,
+      "currentPrice": 920.3779388177109,
+      "marketValue": 10888.07101621352,
+      "profitLoss": 245.60556713440337,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1584.5296862542905,
-      "currentPrice": 1993.543544984535,
-      "marketValue": 13137.439003415044,
-      "profitLoss": 2695.3986704422296,
+      "avgPrice": 1584.5933817352513,
+      "currentPrice": 1993.6236821482726,
+      "marketValue": 13137.967106803182,
+      "profitLoss": 2695.5070210248564,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "ALRIBp",
       "name": "Riber",
       "quantity": 153,
-      "avgPrice": 17.74325915402629,
-      "currentPrice": 15.858432202505394,
-      "marketValue": 2426.3401269833253,
-      "profitLoss": -288.3785235826974,
+      "avgPrice": 17.743972403790835,
+      "currentPrice": 15.859069685334013,
+      "marketValue": 2426.437661856104,
+      "profitLoss": -288.3901159238936,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -69,10 +69,10 @@
       "symbol": "APLD",
       "name": "Applied Digital",
       "quantity": 233,
-      "avgPrice": 46.01934989121006,
-      "currentPrice": 42.94970148990354,
-      "marketValue": 10007.280447147525,
-      "profitLoss": -715.2280775044204,
+      "avgPrice": 46.02119979320323,
+      "currentPrice": 42.951427997091926,
+      "marketValue": 10007.68272332242,
+      "profitLoss": -715.256828493934,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -1284,6 +1284,12 @@
     },
     {
       "date": "2026-06-13",
+      "Matt": 1522.61,
+      "Addi": 61750.34,
+      "Total": 63272.95
+    },
+    {
+      "date": "2026-06-14",
       "Matt": 1522.61,
       "Addi": 61750.34,
       "Total": 63272.95
@@ -4818,8 +4824,8 @@
         "close": 0.7455000281333923
       },
       {
-        "date": "2026-06-12",
-        "close": 0.7458599805831909
+        "date": "2026-06-14",
+        "close": 0.7458299994468689
       }
     ]
   }
