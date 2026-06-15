@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 67324.71156485337,
-    "mattValue": 162.89111498422199,
-    "addiValue": 67161.82044986915,
+    "totalValue": 67624.16321218725,
+    "mattValue": 162.27131424427077,
+    "addiValue": 67461.89189794299,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 336.6235578242668,
+    "dailyChange": 338.12081606093625,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-06-15T05:10:39.064Z"
+    "lastUpdated": "2026-06-15T17:24:23.446Z"
   },
   "positions": [
     {
       "symbol": "SIVE.ST",
       "name": "Sivers Semiconductors",
       "quantity": 1000,
-      "avgPrice": 8.074802489677705,
-      "currentPrice": 9.657414913819892,
-      "marketValue": 9657.414913819892,
-      "profitLoss": 1582.6124241421862,
+      "avgPrice": 8.059080920841089,
+      "currentPrice": 9.532561580245774,
+      "marketValue": 9532.561580245774,
+      "profitLoss": 1473.4806594046865,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 215.47498078411195,
-      "currentPrice": 388.3741167470935,
-      "marketValue": 19418.705837354675,
-      "profitLoss": 8644.95679814908,
+      "avgPrice": 215.05545290744914,
+      "currentPrice": 387.8013755007097,
+      "marketValue": 19390.068775035485,
+      "profitLoss": 8637.296129663031,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "LITE",
       "name": "Lumentum",
       "quantity": 11.83,
-      "avgPrice": 902.6908869824109,
-      "currentPrice": 972.224789109762,
-      "marketValue": 11501.419255168485,
-      "profitLoss": 822.5860621665637,
+      "avgPrice": 900.9333558309032,
+      "currentPrice": 950.8194302628368,
+      "marketValue": 11248.19386000936,
+      "profitLoss": 590.1522605297749,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1590.0083005437223,
-      "currentPrice": 2079.8500010635526,
-      "marketValue": 13706.197987983805,
-      "profitLoss": 3228.05362245463,
+      "avgPrice": 1586.9125684834341,
+      "currentPrice": 2103.8332969787066,
+      "marketValue": 13864.247752173247,
+      "profitLoss": 3406.5042407991123,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "ALRIBp",
       "name": "Riber",
       "quantity": 153,
-      "avgPrice": 17.804607624796905,
-      "currentPrice": 15.934983131916463,
-      "marketValue": 2438.0524191832187,
-      "profitLoss": -286.0525474107075,
+      "avgPrice": 17.76994221165026,
+      "currentPrice": 16.796228714819662,
+      "marketValue": 2569.8229933674083,
+      "profitLoss": -148.97816501508163,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -69,10 +69,10 @@
       "symbol": "APLD",
       "name": "Applied Digital",
       "quantity": 233,
-      "avgPrice": 46.17846478195114,
-      "currentPrice": 44.80699586420207,
-      "marketValue": 10440.030036359083,
-      "profitLoss": -319.5522578355341,
+      "avgPrice": 46.08855572055097,
+      "currentPrice": 46.596553378161865,
+      "marketValue": 10856.996937111715,
+      "profitLoss": 118.36345422333886,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -80,10 +80,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 155,
-      "avgPrice": 1.0509104192530452,
-      "currentPrice": 1.0509104192530452,
-      "marketValue": 162.89111498422199,
-      "profitLoss": -2.432675583621273e-14,
+      "avgPrice": 1.046911704801747,
+      "currentPrice": 1.046911704801747,
+      "marketValue": 162.27131424427077,
+      "profitLoss": -2.4234192523171632e-14,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1296,9 +1296,9 @@
     },
     {
       "date": "2026-06-15",
-      "Matt": 1537.29,
-      "Addi": 61845.05,
-      "Total": 63382.33
+      "Matt": 1531.44,
+      "Addi": 61807.31,
+      "Total": 63338.75
     }
   ],
   "historicalPrices": {
@@ -3795,7 +3795,7 @@
       },
       {
         "date": "2026-06-15",
-        "close": 9.346650123596191
+        "close": 9.382349967956543
       }
     ],
     "USDEUR=X": [
@@ -4313,7 +4313,7 @@
       },
       {
         "date": "2026-06-15",
-        "close": 0.8607000112533569
+        "close": 0.8618000149726868
       }
     ],
     "USDGBP=X": [
@@ -4831,7 +4831,7 @@
       },
       {
         "date": "2026-06-15",
-        "close": 0.7432900071144104
+        "close": 0.7447400093078613
       }
     ]
   }
