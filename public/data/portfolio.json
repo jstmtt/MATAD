@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 68420.15683662712,
-    "mattValue": 173.72169455955836,
-    "addiValue": 68246.43514206757,
+    "totalValue": 69104.01700245342,
+    "mattValue": 161.28317893626956,
+    "addiValue": 68942.73382351715,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 342.1007841831356,
+    "dailyChange": 345.5200850122671,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-06-18T15:42:34.548Z"
+    "lastUpdated": "2026-06-19T05:06:35.179Z"
   },
   "positions": [
     {
       "symbol": "SIVE.ST",
       "name": "Sivers Semiconductors",
       "quantity": 1000,
-      "avgPrice": 7.941779056375187,
-      "currentPrice": 10.054608902202368,
-      "marketValue": 10054.608902202368,
-      "profitLoss": 2112.829845827182,
+      "avgPrice": 7.904960105232509,
+      "currentPrice": 10.261017322564,
+      "marketValue": 10261.017322564,
+      "profitLoss": 2356.0572173314913,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 211.92526897737264,
-      "currentPrice": 412.42623839444923,
-      "marketValue": 20621.311919722462,
-      "profitLoss": 10025.04847085383,
+      "avgPrice": 210.94276038968877,
+      "currentPrice": 419.87382517784795,
+      "marketValue": 20993.6912588924,
+      "profitLoss": 10446.55323940796,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "LITE",
       "name": "Lumentum",
       "quantity": 11.83,
-      "avgPrice": 887.8200537761751,
-      "currentPrice": 859.1792900353448,
-      "marketValue": 10164.09100111813,
-      "profitLoss": -338.8202350540211,
+      "avgPrice": 883.7040234822783,
+      "currentPrice": 848.1397425135087,
+      "marketValue": 10033.493153934809,
+      "profitLoss": -420.7254438605434,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1563.814673716539,
-      "currentPrice": 2179.4556393875505,
-      "marketValue": 14362.598497102303,
-      "profitLoss": 4057.0699621056924,
+      "avgPrice": 1556.5646588698587,
+      "currentPrice": 2209.669074923183,
+      "marketValue": 14561.704840894789,
+      "profitLoss": 4303.9538566127,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "ALRIBp",
       "name": "Riber",
       "quantity": 153,
-      "avgPrice": 17.511296421472444,
-      "currentPrice": 14.608025871942466,
-      "marketValue": 2235.0279584071973,
-      "profitLoss": -444.2003940780867,
+      "avgPrice": 17.43011214741869,
+      "currentPrice": 14.71737447406031,
+      "marketValue": 2251.7582945312274,
+      "profitLoss": -415.04886402383244,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -69,10 +69,10 @@
       "symbol": "APLD",
       "name": "Applied Digital",
       "quantity": 233,
-      "avgPrice": 45.41772568798727,
-      "currentPrice": 46.38968610950691,
-      "marketValue": 10808.79686351511,
-      "profitLoss": 226.46677821407368,
+      "avgPrice": 45.20716417384201,
+      "currentPrice": 46.52819293004263,
+      "marketValue": 10841.068952699932,
+      "profitLoss": 307.7997001947439,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -80,10 +80,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 155,
-      "avgPrice": 1.120785126190699,
-      "currentPrice": 1.120785126190699,
-      "marketValue": 173.72169455955836,
-      "profitLoss": 0,
+      "avgPrice": 1.0405366382985133,
+      "currentPrice": 1.0405366382985133,
+      "marketValue": 161.28317893626956,
+      "profitLoss": 2.3626553850229874e-14,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1308,23 +1308,25 @@
     },
     {
       "date": "2026-06-17",
-      "Matt": 1687.9,
-      "Addi": 63251.75,
-      "Total": 64939.65
+      "Matt": 1661.06,
+      "Addi": 63078.62,
+      "Total": 64739.68
     },
     {
       "date": "2026-06-18",
-      "Matt": 1651.98,
-      "Addi": 63019.98,
-      "Total": 64671.95
+      "Matt": 1564.89,
+      "Addi": 62458.13,
+      "Total": 64023.02
+    },
+    {
+      "date": "2026-06-19",
+      "Matt": 1546.19,
+      "Addi": 62337.5,
+      "Total": 63883.69
     }
   ],
   "historicalPrices": {
     "SIVE.ST": [
-      {
-        "date": "2025-12-18",
-        "close": 3.828000068664551
-      },
       {
         "date": "2025-12-19",
         "close": 3.9159998893737793
@@ -1800,13 +1802,13 @@
       {
         "date": "2026-06-17",
         "close": 101.9000015258789
+      },
+      {
+        "date": "2026-06-18",
+        "close": 96
       }
     ],
     "ALAB": [
-      {
-        "date": "2025-12-18",
-        "close": 145.8800048828125
-      },
       {
         "date": "2025-12-19",
         "close": 164.39999389648438
@@ -2301,10 +2303,6 @@
       }
     ],
     "LITE": [
-      {
-        "date": "2025-12-18",
-        "close": 337.1300048828125
-      },
       {
         "date": "2025-12-19",
         "close": 371.42999267578125
@@ -2802,10 +2800,6 @@
     "ALRIBp": [],
     "APLD": [
       {
-        "date": "2025-12-18",
-        "close": 23.899999618530273
-      },
-      {
         "date": "2025-12-19",
         "close": 27.850000381469727
       },
@@ -3299,10 +3293,6 @@
       }
     ],
     "USDSEK=X": [
-      {
-        "date": "2025-12-18",
-        "close": 9.298609733581543
-      },
       {
         "date": "2025-12-19",
         "close": 9.28085994720459
@@ -3812,15 +3802,15 @@
         "close": 9.357489585876465
       },
       {
-        "date": "2026-06-18",
-        "close": 9.560979843139648
+        "date": "2026-06-17",
+        "close": 9.508660316467285
+      },
+      {
+        "date": "2026-06-19",
+        "close": 9.623649597167969
       }
     ],
     "USDEUR=X": [
-      {
-        "date": "2025-12-18",
-        "close": 0.8516200184822083
-      },
       {
         "date": "2025-12-19",
         "close": 0.8528299927711487
@@ -4330,15 +4320,15 @@
         "close": 0.861329972743988
       },
       {
-        "date": "2026-06-18",
-        "close": 0.8712000250816345
+        "date": "2026-06-17",
+        "close": 0.8690099716186523
+      },
+      {
+        "date": "2026-06-19",
+        "close": 0.8748999834060669
       }
     ],
     "USDGBP=X": [
-      {
-        "date": "2025-12-18",
-        "close": 0.7476860284805298
-      },
       {
         "date": "2025-12-19",
         "close": 0.7470830082893372
@@ -4848,8 +4838,12 @@
         "close": 0.7447999715805054
       },
       {
-        "date": "2026-06-18",
-        "close": 0.7557399868965149
+        "date": "2026-06-17",
+        "close": 0.7518100142478943
+      },
+      {
+        "date": "2026-06-19",
+        "close": 0.7592599987983704
       }
     ]
   }
