@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": 59826.56918787513,
-    "mattValue": 114.81470214759825,
+    "totalValue": 59826.46067849376,
+    "mattValue": 114.70619276621858,
     "addiValue": 59711.754485727535,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 299.13284593937567,
+    "dailyChange": 299.13230339246877,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-06-27T13:57:57.599Z"
+    "lastUpdated": "2026-06-28T04:27:11.739Z"
   },
   "positions": [
     {
@@ -69,10 +69,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 171.6297,
-      "avgPrice": 0.6689676549839644,
-      "currentPrice": 0.6689676549839644,
-      "marketValue": 114.81470214759825,
-      "profitLoss": -0.000015787003085347993,
+      "avgPrice": 0.6683354252690625,
+      "currentPrice": 0.6683354252690625,
+      "marketValue": 114.70619276621858,
+      "profitLoss": -0.000015772083062854464,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -87,9 +87,9 @@
     },
     {
       "date": "2025-12-28",
-      "Matt": 10.93,
+      "Matt": 10.92,
       "Addi": 41700.77,
-      "Total": 41711.71
+      "Total": 41711.7
     },
     {
       "date": "2025-12-29",
@@ -1167,15 +1167,21 @@
     },
     {
       "date": "2026-06-26",
-      "Matt": 1116.26,
-      "Addi": 57677.24,
-      "Total": 58793.5
+      "Matt": 1116.91,
+      "Addi": 57682.12,
+      "Total": 58799.03
     },
     {
       "date": "2026-06-27",
-      "Matt": 1117.96,
-      "Addi": 57690.12,
-      "Total": 58808.09
+      "Matt": 1116.91,
+      "Addi": 57682.12,
+      "Total": 58799.03
+    },
+    {
+      "date": "2026-06-28",
+      "Matt": 1116.91,
+      "Addi": 57682.12,
+      "Total": 58799.03
     }
   ],
   "historicalPrices": {
@@ -3670,8 +3676,8 @@
         "close": 9.74032974243164
       },
       {
-        "date": "2026-06-27",
-        "close": 9.725500106811523
+        "date": "2026-06-26",
+        "close": 9.734700202941895
       }
     ],
     "USDEUR=X": [
