@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": 56604.67726928973,
-    "mattValue": 90.10501695472612,
+    "totalValue": 56618.34973721109,
+    "mattValue": 103.77748487607921,
     "addiValue": 56514.572252335005,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 283.02338634644866,
+    "dailyChange": 283.09174868605544,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-04T03:48:25.141Z"
+    "lastUpdated": "2026-07-04T13:49:26.584Z"
   },
   "positions": [
     {
@@ -69,10 +69,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 171.6297,
-      "avgPrice": 0.5249963531832372,
-      "currentPrice": 0.5249963531832372,
-      "marketValue": 90.10501695472612,
-      "profitLoss": 0.00005035679305656248,
+      "avgPrice": 0.6046593773535752,
+      "currentPrice": 0.6046593773535752,
+      "marketValue": 103.77748487607921,
+      "profitLoss": -0.000022661301708616887,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -117,9 +117,9 @@
     },
     {
       "date": "2026-01-04",
-      "Matt": 8.58,
+      "Matt": 9.88,
       "Addi": 41700.77,
-      "Total": 41709.35
+      "Total": 41710.66
     },
     {
       "date": "2026-01-05",
@@ -1197,15 +1197,15 @@
     },
     {
       "date": "2026-07-03",
-      "Matt": 1001.92,
-      "Addi": 55095.25,
-      "Total": 56097.18
+      "Matt": 997.82,
+      "Addi": 55064.15,
+      "Total": 56061.97
     },
     {
       "date": "2026-07-04",
-      "Matt": 1001.92,
-      "Addi": 55095.25,
-      "Total": 56097.18
+      "Matt": 1002.1,
+      "Addi": 55096.59,
+      "Total": 56098.69
     }
   ],
   "historicalPrices": {
@@ -3724,8 +3724,8 @@
         "close": 9.683899879455566
       },
       {
-        "date": "2026-07-03",
-        "close": 9.644200325012207
+        "date": "2026-07-04",
+        "close": 9.642499923706055
       }
     ],
     "USDEUR=X": [
@@ -4776,7 +4776,7 @@
         "close": 0.7496979832649231
       },
       {
-        "date": "2026-07-03",
+        "date": "2026-07-04",
         "close": 0.7490699887275696
       }
     ]
