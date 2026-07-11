@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": 50432.010575701985,
-    "mattValue": 0.2821889692195195,
+    "totalValue": 50432.04732503105,
+    "mattValue": 0.31893829828990833,
     "addiValue": 50431.728386732764,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 252.16005287850993,
+    "dailyChange": 252.16023662515528,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-11T03:24:45.363Z"
+    "lastUpdated": "2026-07-11T13:42:00.282Z"
   },
   "positions": [
     {
@@ -58,10 +58,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 0.6297,
-      "avgPrice": 0.4481572535477171,
-      "currentPrice": 0.4481572535477171,
-      "marketValue": 0.2821889692195195,
-      "profitLoss": -0.000015653339477988974,
+      "avgPrice": 0.5065301559673117,
+      "currentPrice": 0.5065301559673117,
+      "marketValue": 0.31893829828990833,
+      "profitLoss": -0.00002374092270782698,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -128,9 +128,9 @@
     },
     {
       "date": "2026-01-11",
-      "Matt": 7.33,
+      "Matt": 8.28,
       "Addi": 40811.78,
-      "Total": 40819.11
+      "Total": 40820.06
     },
     {
       "date": "2026-01-12",
@@ -1208,15 +1208,15 @@
     },
     {
       "date": "2026-07-10",
-      "Matt": 2.73,
+      "Matt": 3.08,
       "Addi": 48069.25,
-      "Total": 48071.98
+      "Total": 48072.33
     },
     {
       "date": "2026-07-11",
-      "Matt": 2.73,
+      "Matt": 3.08,
       "Addi": 48069.25,
-      "Total": 48071.98
+      "Total": 48072.33
     }
   ],
   "historicalPrices": {
@@ -3211,6 +3211,10 @@
       {
         "date": "2026-07-09",
         "close": 41.79999923706055
+      },
+      {
+        "date": "2026-07-10",
+        "close": 47.279998779296875
       }
     ],
     "USDSEK=X": [
@@ -3736,7 +3740,7 @@
       },
       {
         "date": "2026-07-10",
-        "close": 9.649800300598145
+        "close": 9.658920288085938
       }
     ],
     "USDEUR=X": [
