@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 50432.04732503105,
+    "totalValue": 50444.2131473188,
     "mattValue": 0.31893829828990833,
-    "addiValue": 50431.728386732764,
+    "addiValue": 50443.89420902051,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 252.16023662515528,
+    "dailyChange": 252.221065736594,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-11T13:42:00.282Z"
+    "lastUpdated": "2026-07-12T03:36:15.839Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 288.56842915876877,
-      "currentPrice": 236.4262583491158,
-      "marketValue": 8038.492783869938,
-      "profitLoss": -1772.8338075281997,
+      "avgPrice": 288.6380415305693,
+      "currentPrice": 236.4832922826185,
+      "marketValue": 8040.431937609029,
+      "profitLoss": -1773.2614744303276,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 214.585790209448,
-      "currentPrice": 412.0227136378014,
-      "marketValue": 20601.13568189007,
-      "profitLoss": 9871.846171417674,
+      "avgPrice": 214.63755549040653,
+      "currentPrice": 412.122107318585,
+      "marketValue": 20606.10536592925,
+      "profitLoss": 9874.227591408924,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1583.4468872913062,
-      "currentPrice": 1932.7615773342955,
-      "marketValue": 12736.886231682754,
-      "profitLoss": 2301.981536837813,
+      "avgPrice": 1583.8288677240441,
+      "currentPrice": 1933.227824171884,
+      "marketValue": 12739.958795311859,
+      "profitLoss": 2302.5368518980486,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 286.61540232484566,
-      "currentPrice": 258.72039112257147,
-      "marketValue": 9055.213689290002,
-      "profitLoss": -976.3253920795948,
+      "avgPrice": 286.68454356114984,
+      "currentPrice": 258.78280314772513,
+      "marketValue": 9057.39811017038,
+      "profitLoss": -976.5609144698642,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -1214,6 +1214,12 @@
     },
     {
       "date": "2026-07-11",
+      "Matt": 3.08,
+      "Addi": 48069.25,
+      "Total": 48072.33
+    },
+    {
+      "date": "2026-07-12",
       "Matt": 3.08,
       "Addi": 48069.25,
       "Total": 48072.33
@@ -4791,8 +4797,8 @@
         "close": 0.7454000115394592
       },
       {
-        "date": "2026-07-10",
-        "close": 0.7463700175285339
+        "date": "2026-07-12",
+        "close": 0.7461900115013123
       }
     ]
   }
