@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 43934.90168015336,
-    "mattValue": 0.31740369596874546,
-    "addiValue": 43934.58427645739,
+    "totalValue": 47101.117079846365,
+    "mattValue": 0.2882516344168375,
+    "addiValue": 47100.82882821195,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 219.6745084007668,
+    "dailyChange": 235.50558539923182,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-14T03:14:15.089Z"
+    "lastUpdated": "2026-07-14T14:01:00.951Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 287.7049703667781,
-      "currentPrice": 212.46670723099174,
-      "marketValue": 7223.868045853719,
-      "profitLoss": -2558.1009466167375,
+      "avgPrice": 288.94006824606646,
+      "currentPrice": 224.33369903822143,
+      "marketValue": 7627.345767299528,
+      "profitLoss": -2196.6165530667317,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 213.94370338195702,
-      "currentPrice": 356.0144708089244,
-      "marketValue": 17800.72354044622,
-      "profitLoss": 7103.538371348369,
+      "avgPrice": 214.8621491564505,
+      "currentPrice": 384.7723941650924,
+      "marketValue": 19238.61970825462,
+      "profitLoss": 8495.512250432097,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1578.7088737100296,
-      "currentPrice": 1624.9737214092168,
-      "marketValue": 10708.566261757549,
-      "profitLoss": 304.8850456161315,
+      "avgPrice": 1585.4861635825234,
+      "currentPrice": 1771.8122906967606,
+      "marketValue": 11676.231478911763,
+      "profitLoss": 1227.8879665629956,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 285.75778740910874,
-      "currentPrice": 234.32646938285438,
-      "marketValue": 8201.426428399904,
-      "profitLoss": -1800.0961309189024,
+      "avgPrice": 286.98452616433144,
+      "currentPrice": 244.53233924988692,
+      "marketValue": 8558.631873746042,
+      "profitLoss": -1485.8265420055566,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 0.6297,
-      "avgPrice": 0.5040929373665531,
-      "currentPrice": 0.5040929373665531,
-      "marketValue": 0.31740369596874546,
-      "profitLoss": -0.000023626690973070364,
+      "avgPrice": 0.4577799611517865,
+      "currentPrice": 0.4577799611517865,
+      "marketValue": 0.2882516344168375,
+      "profitLoss": -0.000012407120442468089,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1226,15 +1226,15 @@
     },
     {
       "date": "2026-07-13",
-      "Matt": 3.08,
+      "Matt": 2.78,
       "Addi": 44169.88,
-      "Total": 44172.96
+      "Total": 44172.66
     },
     {
       "date": "2026-07-14",
-      "Matt": 3.07,
+      "Matt": 2.8,
       "Addi": 44169.88,
-      "Total": 44172.95
+      "Total": 44172.68
     }
   ],
   "historicalPrices": {
@@ -3213,6 +3213,10 @@
       {
         "date": "2026-07-10",
         "close": 47.279998779296875
+      },
+      {
+        "date": "2026-07-13",
+        "close": 42.79999923706055
       }
     ],
     "USDSEK=X": [
@@ -3734,7 +3738,7 @@
       },
       {
         "date": "2026-07-14",
-        "close": 9.705619812011719
+        "close": 9.617799758911133
       }
     ],
     "USDEUR=X": [
@@ -4256,7 +4260,7 @@
       },
       {
         "date": "2026-07-14",
-        "close": 0.8776000142097473
+        "close": 0.8730999827384949
       }
     ],
     "USDGBP=X": [
@@ -4778,7 +4782,7 @@
       },
       {
         "date": "2026-07-14",
-        "close": 0.7486100196838379
+        "close": 0.7454100251197815
       }
     ]
   }
