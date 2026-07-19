@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": 37433.81273431292,
-    "mattValue": 0.22653436650909334,
+    "totalValue": 37433.812940705866,
+    "mattValue": 0.22674075944908317,
     "addiValue": 37433.58619994642,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 187.16906367156463,
+    "dailyChange": 187.16906470352933,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-18T13:36:39.033Z"
+    "lastUpdated": "2026-07-19T03:32:45.764Z"
   },
   "positions": [
     {
@@ -58,10 +58,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 0.6297,
-      "avgPrice": 0.3597898762203247,
-      "currentPrice": 0.3597898762203247,
-      "marketValue": 0.22653436650909334,
-      "profitLoss": -0.00002531854684513169,
+      "avgPrice": 0.3601176767720733,
+      "currentPrice": 0.3601176767720733,
+      "marketValue": 0.22674075944908317,
+      "profitLoss": -0.000025341614291365845,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1156,6 +1156,12 @@
     },
     {
       "date": "2026-07-18",
+      "Matt": 2.19,
+      "Addi": 39070.48,
+      "Total": 39072.67
+    },
+    {
+      "date": "2026-07-19",
       "Matt": 2.19,
       "Addi": 39070.48,
       "Total": 39072.67
@@ -3681,8 +3687,8 @@
         "close": 9.639880180358887
       },
       {
-        "date": "2026-07-17",
-        "close": 9.645079612731934
+        "date": "2026-07-18",
+        "close": 9.636300086975098
       }
     ],
     "USDEUR=X": [
@@ -4733,7 +4739,7 @@
         "close": 0.7419000267982483
       },
       {
-        "date": "2026-07-17",
+        "date": "2026-07-19",
         "close": 0.7433599829673767
       }
     ]
