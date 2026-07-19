@@ -7,7 +7,7 @@
     "cashBalance": 0,
     "dailyChange": 187.16906470352933,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-19T03:32:45.764Z"
+    "lastUpdated": "2026-07-19T13:39:21.250Z"
   },
   "positions": [
     {
@@ -3687,7 +3687,7 @@
         "close": 9.639880180358887
       },
       {
-        "date": "2026-07-18",
+        "date": "2026-07-19",
         "close": 9.636300086975098
       }
     ],
