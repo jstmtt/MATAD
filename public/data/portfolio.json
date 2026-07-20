@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 37433.812940705866,
-    "mattValue": 0.22674075944908317,
-    "addiValue": 37433.58619994642,
+    "totalValue": 37917.57592927116,
+    "mattValue": 0.2265566780968263,
+    "addiValue": 37917.34937259306,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 187.16906470352933,
+    "dailyChange": 189.5878796463558,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-19T13:39:21.250Z"
+    "lastUpdated": "2026-07-20T03:47:22.019Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 289.7369087177026,
-      "currentPrice": 186.55635572173486,
-      "marketValue": 6342.916094538985,
-      "profitLoss": -3508.1388018629013,
+      "avgPrice": 289.9241160983431,
+      "currentPrice": 189.97764208220445,
+      "marketValue": 6459.239830794952,
+      "profitLoss": -3398.1801165487136,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 215.45469714506925,
-      "currentPrice": 303.28509089235456,
-      "marketValue": 15164.254544617728,
-      "profitLoss": 4391.519687364265,
+      "avgPrice": 215.59390864448696,
+      "currentPrice": 307.6260016046269,
+      "marketValue": 15381.300080231344,
+      "profitLoss": 4601.604648006998,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1589.8586258375185,
-      "currentPrice": 1348.7985546197601,
-      "marketValue": 8888.573707753614,
-      "profitLoss": -1588.5843024345647,
+      "avgPrice": 1590.885879390575,
+      "currentPrice": 1356.9827796600364,
+      "marketValue": 8942.507697571573,
+      "profitLoss": -1541.4199068541009,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 287.77597363151443,
-      "currentPrice": 201.08119580103116,
-      "marketValue": 7037.8418530360905,
-      "profitLoss": -3034.3172240669155,
+      "avgPrice": 287.96191399538895,
+      "currentPrice": 203.8371932570055,
+      "marketValue": 7134.301763995193,
+      "profitLoss": -2944.3652258434213,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "SIVE.ST",
       "name": "SIVERS SEMICONDUCTORS AB",
       "quantity": 0.6297,
-      "avgPrice": 0.3601176767720733,
-      "currentPrice": 0.3601176767720733,
-      "marketValue": 0.22674075944908317,
-      "profitLoss": -0.000025341614291365845,
+      "avgPrice": 0.35982531227143,
+      "currentPrice": 0.35982531227143,
+      "marketValue": 0.2265566780968263,
+      "profitLoss": -0.00002532104049317243,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1162,6 +1162,12 @@
     },
     {
       "date": "2026-07-19",
+      "Matt": 2.19,
+      "Addi": 39070.48,
+      "Total": 39072.67
+    },
+    {
+      "date": "2026-07-20",
       "Matt": 2.19,
       "Addi": 39070.48,
       "Total": 39072.67
@@ -2665,10 +2671,6 @@
     ],
     "SIVE.ST": [
       {
-        "date": "2026-01-19",
-        "close": 3.434000015258789
-      },
-      {
         "date": "2026-01-20",
         "close": 3.380000114440918
       },
@@ -3166,10 +3168,6 @@
       }
     ],
     "USDSEK=X": [
-      {
-        "date": "2026-01-19",
-        "close": 9.200860023498535
-      },
       {
         "date": "2026-01-20",
         "close": 9.202890396118164
@@ -3687,15 +3685,11 @@
         "close": 9.639880180358887
       },
       {
-        "date": "2026-07-19",
-        "close": 9.636300086975098
+        "date": "2026-07-20",
+        "close": 9.644129753112793
       }
     ],
     "USDEUR=X": [
-      {
-        "date": "2026-01-19",
-        "close": 0.8602200150489807
-      },
       {
         "date": "2026-01-20",
         "close": 0.8591700196266174
@@ -4213,15 +4207,11 @@
         "close": 0.873769998550415
       },
       {
-        "date": "2026-07-17",
+        "date": "2026-07-20",
         "close": 0.8737000226974487
       }
     ],
     "USDGBP=X": [
-      {
-        "date": "2026-01-19",
-        "close": 0.7460299730300903
-      },
       {
         "date": "2026-01-20",
         "close": 0.7452499866485596
@@ -4739,8 +4729,8 @@
         "close": 0.7419000267982483
       },
       {
-        "date": "2026-07-19",
-        "close": 0.7433599829673767
+        "date": "2026-07-20",
+        "close": 0.7428799867630005
       }
     ]
   }
