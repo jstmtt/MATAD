@@ -1,13 +1,13 @@
 {
   "summary": {
-    "totalValue": 44495.47595307457,
-    "mattValue": 1340.94,
+    "totalValue": 44295.47595307457,
+    "mattValue": 1140.94,
     "addiValue": 43154.53595307457,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 222.47737976537286,
+    "dailyChange": 221.47737976537286,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-07-25T03:23:51.106Z"
+    "lastUpdated": "2026-07-25T13:50:00.667Z"
   },
   "positions": [
     {
@@ -69,10 +69,10 @@
       "symbol": "BE",
       "name": "BLOOM ENERGY CORP- A",
       "quantity": 6.1709,
-      "avgPrice": 217.3,
-      "currentPrice": 217.3,
-      "marketValue": 1340.94,
-      "profitLoss": 0.003429999999980282,
+      "avgPrice": 184.89,
+      "currentPrice": 184.89,
+      "marketValue": 1140.94,
+      "profitLoss": 0.0022990000002209854,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -3849,8 +3849,8 @@
         "close": 9.756489753723145
       },
       {
-        "date": "2026-07-24",
-        "close": 9.711999893188477
+        "date": "2026-07-25",
+        "close": 9.711700439453125
       }
     ],
     "USDEUR=X": [
