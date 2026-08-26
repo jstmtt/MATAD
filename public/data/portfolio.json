@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 47492.08029043194,
-    "mattValue": 1859.63,
-    "addiValue": 45632.450290431945,
+    "totalValue": 47436.90032570174,
+    "mattValue": 1932.6,
+    "addiValue": 45504.30032570174,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 237.46040145215972,
+    "dailyChange": 237.1845016285087,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-08-26T01:45:43.913Z"
+    "lastUpdated": "2026-08-26T13:04:38.094Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 293.88006851987143,
-      "currentPrice": 237.4648457766598,
-      "marketValue": 8073.804756406434,
-      "profitLoss": -1918.1175732691936,
+      "avgPrice": 293.0244467423317,
+      "currentPrice": 238.14238535596763,
+      "marketValue": 8096.8411021029,
+      "profitLoss": -1865.9900871363777,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "BE",
       "name": "Bloom Energy",
       "quantity": 28.33557457,
-      "avgPrice": 225.7025928731576,
-      "currentPrice": 214.855354391418,
-      "marketValue": 6088.049916121801,
-      "profitLoss": -307.36273487790754,
+      "avgPrice": 225.0454674863218,
+      "currentPrice": 213.89323149815695,
+      "marketValue": 6060.7876111342985,
+      "profitLoss": -316.00501446488363,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 218.53564131732054,
-      "currentPrice": 279.2238852652548,
-      "marketValue": 13961.19426326274,
-      "profitLoss": 3034.412197396713,
+      "avgPrice": 217.89938226504307,
+      "currentPrice": 279.51131271261147,
+      "marketValue": 13975.565635630574,
+      "profitLoss": 3080.596522378422,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1612.5931762227415,
-      "currentPrice": 1469.9665846033542,
-      "marketValue": 9687.070237753305,
-      "profitLoss": -939.9083116989162,
+      "avgPrice": 1607.8981662928838,
+      "currentPrice": 1453.4546369961124,
+      "marketValue": 9578.25661034924,
+      "profitLoss": -1017.7818541827821,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,37 +58,70 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 291.89109258980284,
-      "currentPrice": 223.49517476821893,
-      "marketValue": 7822.331116887663,
-      "profitLoss": -2393.8571237554374,
+      "avgPrice": 291.0412616477197,
+      "currentPrice": 222.65283904242068,
+      "marketValue": 7792.849366484724,
+      "profitLoss": -2393.5947911854664,
       "owner": "Addi",
       "broker": "Trading 212"
     },
     {
-      "symbol": "AXTI",
-      "name": "AXT INC",
-      "quantity": 14.1914,
-      "avgPrice": 65.4,
-      "currentPrice": 65.4,
-      "marketValue": 928.12,
-      "profitLoss": 0.0024399999999786814,
-      "owner": "Matt",
-      "broker": "Interactive Brokers"
-    },
-    {
       "symbol": "NBIS",
       "name": "NEBIUS GROUP NV",
-      "quantity": 4.4166,
-      "avgPrice": 210.91,
-      "currentPrice": 210.91,
-      "marketValue": 931.51,
-      "profitLoss": 0.004894000000035703,
+      "quantity": 8.7066,
+      "avgPrice": 221.97,
+      "currentPrice": 221.97,
+      "marketValue": 1932.6,
+      "profitLoss": -0.004002000000127737,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
   ],
   "transactions": [
+    {
+      "id": "10118848776",
+      "date": "2026-08-25",
+      "type": "SELL",
+      "symbol": "AXTI",
+      "qty": 14,
+      "price": 66.95,
+      "amount": 936.27791962,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "10118848821",
+      "date": "2026-08-25",
+      "type": "SELL",
+      "symbol": "AXTI",
+      "qty": 0.1914,
+      "price": 66.93,
+      "amount": 12.810100209,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "10118869288",
+      "date": "2026-08-25",
+      "type": "BUY",
+      "symbol": "NBIS",
+      "qty": 4,
+      "price": 221.25,
+      "amount": 886.000012,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "10118897500",
+      "date": "2026-08-25",
+      "type": "BUY",
+      "symbol": "NBIS",
+      "qty": 0.29,
+      "price": 222.09,
+      "amount": 65.05016187,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
     {
       "id": "10112495639",
       "date": "2026-08-24",
@@ -1502,33 +1535,33 @@
     },
     {
       "date": "2026-08-14",
-      "Matt": 1873.64,
+      "Matt": 0,
       "Addi": 49621.72,
-      "Total": 51495.36
+      "Total": 49621.72
     },
     {
       "date": "2026-08-15",
-      "Matt": 1873.64,
+      "Matt": 0,
       "Addi": 49621.72,
-      "Total": 51495.36
+      "Total": 49621.72
     },
     {
       "date": "2026-08-16",
-      "Matt": 1873.64,
+      "Matt": 0,
       "Addi": 49621.72,
-      "Total": 51495.36
+      "Total": 49621.72
     },
     {
       "date": "2026-08-17",
-      "Matt": 2202.51,
+      "Matt": 0,
       "Addi": 50833.37,
-      "Total": 53035.88
+      "Total": 50833.37
     },
     {
       "date": "2026-08-18",
-      "Matt": 1889.01,
+      "Matt": 0,
       "Addi": 47427.93,
-      "Total": 49316.94
+      "Total": 47427.93
     },
     {
       "date": "2026-08-19",
@@ -1562,21 +1595,21 @@
     },
     {
       "date": "2026-08-24",
-      "Matt": 1859.62,
+      "Matt": 931.51,
       "Addi": 45625.29,
-      "Total": 47484.92
+      "Total": 46556.8
     },
     {
       "date": "2026-08-25",
-      "Matt": 1937.56,
+      "Matt": 1932.6,
       "Addi": 46775.4,
-      "Total": 48712.96
+      "Total": 48708
     },
     {
       "date": "2026-08-26",
-      "Matt": 1937.56,
+      "Matt": 1932.6,
       "Addi": 46775.4,
-      "Total": 48712.96
+      "Total": 48708
     }
   ],
   "historicalPrices": {
@@ -4610,7 +4643,7 @@
       },
       {
         "date": "2026-08-26",
-        "close": 9.458209991455078
+        "close": 9.520500183105469
       }
     ],
     "USDEUR=X": [
@@ -5132,7 +5165,7 @@
       },
       {
         "date": "2026-08-26",
-        "close": 0.8567000031471252
+        "close": 0.8579000234603882
       }
     ],
     "USDGBP=X": [
@@ -5654,7 +5687,7 @@
       },
       {
         "date": "2026-08-26",
-        "close": 0.7328799962997437
+        "close": 0.7350199818611145
       }
     ],
     "NBIS": [
