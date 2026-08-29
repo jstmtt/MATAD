@@ -7,7 +7,7 @@
     "cashBalance": 0,
     "dailyChange": 230.56584642160738,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-08-29T06:46:37.417Z"
+    "lastUpdated": "2026-08-29T16:35:40.434Z"
   },
   "positions": [
     {
@@ -4697,8 +4697,8 @@
         "close": 9.513970375061035
       },
       {
-        "date": "2026-08-29",
-        "close": 9.591699600219727
+        "date": "2026-08-28",
+        "close": 9.593999862670898
       }
     ],
     "USDEUR=X": [
