@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 43960.46290543874,
-    "mattValue": 0,
-    "addiValue": 43960.46290543874,
+    "totalValue": 45939.80742100071,
+    "mattValue": 1646.63,
+    "addiValue": 44293.17742100071,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 219.80231452719372,
+    "dailyChange": 229.69903710500355,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-09-03T16:15:03.936Z"
+    "lastUpdated": "2026-09-04T04:13:05.218Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 291.6278405344373,
-      "currentPrice": 211.5457542169919,
-      "marketValue": 7192.555643377725,
-      "profitLoss": -2722.7909347931445,
+      "avgPrice": 291.4423761670798,
+      "currentPrice": 210.28729885957543,
+      "marketValue": 7149.768161225565,
+      "profitLoss": -2759.2726284551477,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "BE",
       "name": "Bloom Energy",
       "quantity": 28.33557457,
-      "avgPrice": 223.97286108626176,
-      "currentPrice": 233.84529591237313,
-      "marketValue": 6626.140820168765,
-      "profitLoss": 279.74111320274284,
+      "avgPrice": 223.83042274803415,
+      "currentPrice": 237.2867902701623,
+      "marketValue": 6723.657540176134,
+      "profitLoss": 381.29390536458754,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 216.86083536784406,
-      "currentPrice": 281.4842821724293,
-      "marketValue": 14074.214108621465,
-      "profitLoss": 3231.1723402292614,
+      "avgPrice": 216.72292001119487,
+      "currentPrice": 286.3460667128764,
+      "marketValue": 14317.30333564382,
+      "profitLoss": 3481.1573350840786,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1600.2346399705177,
-      "currentPrice": 1539.079594807796,
-      "marketValue": 10142.52452576601,
-      "profitLoss": -403.01135011454204,
+      "avgPrice": 1599.2169507657359,
+      "currentPrice": 1565.878627367006,
+      "marketValue": 10319.129976137492,
+      "profitLoss": -219.69933449852525,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,15 +58,48 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 289.6541076498554,
-      "currentPrice": 169.2865087858507,
-      "marketValue": 5925.0278075047745,
-      "profitLoss": -4212.865960240165,
+      "avgPrice": 289.4698985025759,
+      "currentPrice": 165.23766879479146,
+      "marketValue": 5783.318407817701,
+      "profitLoss": -4348.128039772457,
       "owner": "Addi",
       "broker": "Trading 212"
+    },
+    {
+      "symbol": "CRDO",
+      "name": "CREDO TECHNOLOGY GROUP HOLDI",
+      "quantity": 10.03,
+      "avgPrice": 164.17,
+      "currentPrice": 164.17,
+      "marketValue": 1646.63,
+      "profitLoss": 0.004900000000361615,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
     }
   ],
   "transactions": [
+    {
+      "id": "10169447955",
+      "date": "2026-09-03",
+      "type": "BUY",
+      "symbol": "CRDO",
+      "qty": 10,
+      "price": 167,
+      "amount": 1671.00003,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
+    {
+      "id": "10169447987",
+      "date": "2026-09-03",
+      "type": "BUY",
+      "symbol": "CRDO",
+      "qty": 0.03,
+      "price": 167,
+      "amount": 5.01000009,
+      "owner": "Matt",
+      "broker": "Interactive Brokers"
+    },
     {
       "id": "10160098086",
       "date": "2026-09-02",
@@ -1721,17 +1754,19 @@
     },
     {
       "date": "2026-09-03",
-      "Matt": 0,
+      "Matt": 1657.16,
       "Addi": 43046.83,
-      "Total": 43046.83
+      "Total": 44703.99
+    },
+    {
+      "date": "2026-09-04",
+      "Matt": 1657.16,
+      "Addi": 43046.83,
+      "Total": 44703.99
     }
   ],
   "historicalPrices": {
     "MRVL": [
-      {
-        "date": "2026-03-03",
-        "close": 77.51000213623047
-      },
       {
         "date": "2026-03-04",
         "close": 78.08999633789062
@@ -2243,10 +2278,6 @@
     ],
     "BE": [
       {
-        "date": "2026-03-03",
-        "close": 153.02000427246094
-      },
-      {
         "date": "2026-03-04",
         "close": 164.77999877929688
       },
@@ -2756,10 +2787,6 @@
       }
     ],
     "ALAB": [
-      {
-        "date": "2026-03-03",
-        "close": 109.80000305175781
-      },
       {
         "date": "2026-03-04",
         "close": 113.7699966430664
@@ -3271,10 +3298,6 @@
     ],
     "SNDK1": [],
     "CRDO": [
-      {
-        "date": "2026-03-03",
-        "close": 97.30000305175781
-      },
       {
         "date": "2026-03-04",
         "close": 102.54000091552734
@@ -4288,10 +4311,6 @@
     ],
     "USDSEK=X": [
       {
-        "date": "2026-03-03",
-        "close": 9.155030250549316
-      },
-      {
         "date": "2026-03-04",
         "close": 9.255009651184082
       },
@@ -4816,15 +4835,15 @@
         "close": 9.615300178527832
       },
       {
-        "date": "2026-09-03",
-        "close": 9.541799545288086
+        "date": "2026-09-02",
+        "close": 9.630809783935547
+      },
+      {
+        "date": "2026-09-04",
+        "close": 9.530619621276855
       }
     ],
     "USDEUR=X": [
-      {
-        "date": "2026-03-03",
-        "close": 0.8549000024795532
-      },
       {
         "date": "2026-03-04",
         "close": 0.8611599802970886
@@ -5350,15 +5369,15 @@
         "close": 0.8623999953269958
       },
       {
-        "date": "2026-09-03",
-        "close": 0.8597999811172485
+        "date": "2026-09-02",
+        "close": 0.8631600141525269
+      },
+      {
+        "date": "2026-09-04",
+        "close": 0.8598999977111816
       }
     ],
     "USDGBP=X": [
-      {
-        "date": "2026-03-03",
-        "close": 0.7456799745559692
-      },
       {
         "date": "2026-03-04",
         "close": 0.7488600015640259
@@ -5884,8 +5903,12 @@
         "close": 0.7398999929428101
       },
       {
-        "date": "2026-09-03",
-        "close": 0.73853999376297
+        "date": "2026-09-02",
+        "close": 0.7416399717330933
+      },
+      {
+        "date": "2026-09-04",
+        "close": 0.7390099763870239
       }
     ],
     "NBIS": [
