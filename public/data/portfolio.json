@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 49353.05805788704,
+    "totalValue": 49355.49276711395,
     "mattValue": 1710.82,
-    "addiValue": 47642.23805788704,
+    "addiValue": 47644.67276711395,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 246.76529028943523,
+    "dailyChange": 246.77746383556976,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-09-07T04:09:11.329Z"
+    "lastUpdated": "2026-09-07T17:39:13.507Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 291.00133951428194,
-      "currentPrice": 222.3806447776125,
-      "marketValue": 7560.941922438825,
-      "profitLoss": -2333.103621046762,
+      "avgPrice": 291.69893697773574,
+      "currentPrice": 222.39231670563066,
+      "marketValue": 7561.338767991442,
+      "profitLoss": -2356.4250892515715,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "BE",
       "name": "Bloom Energy",
       "quantity": 28.33557457,
-      "avgPrice": 223.49170254632085,
-      "currentPrice": 266.12901018198556,
-      "marketValue": 7540.91841325194,
-      "profitLoss": 1208.152609974406,
+      "avgPrice": 224.02746380796833,
+      "currentPrice": 266.1427552768637,
+      "marketValue": 7541.307888412831,
+      "profitLoss": 1193.360981954168,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 216.3949555178931,
-      "currentPrice": 303.6374661119898,
-      "marketValue": 15181.87330559949,
-      "profitLoss": 4362.1255297048365,
+      "avgPrice": 216.91370423680084,
+      "currentPrice": 303.6529656591316,
+      "marketValue": 15182.64828295658,
+      "profitLoss": 4336.963071116537,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1596.7968727374846,
-      "currentPrice": 1733.7187755301704,
-      "marketValue": 11425.195461571782,
-      "profitLoss": 902.314449411431,
+      "avgPrice": 1600.624763873422,
+      "currentPrice": 1733.8056718678358,
+      "marketValue": 11425.76810787217,
+      "profitLoss": 877.6613180072854,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 289.03184677928056,
-      "currentPrice": 169.5231130007143,
-      "marketValue": 5933.308955025001,
-      "profitLoss": -4182.805682249818,
+      "avgPrice": 289.7247229134837,
+      "currentPrice": 169.53170628231226,
+      "marketValue": 5933.609719880929,
+      "profitLoss": -4206.755582090997,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -4834,7 +4834,7 @@
       },
       {
         "date": "2026-09-07",
-        "close": 9.584779739379883
+        "close": 9.590999603271484
       }
     ],
     "USDEUR=X": [
@@ -5360,7 +5360,7 @@
       },
       {
         "date": "2026-09-07",
-        "close": 0.8610000014305115
+        "close": 0.8598999977111816
       }
     ],
     "USDGBP=X": [
@@ -5886,7 +5886,7 @@
       },
       {
         "date": "2026-09-07",
-        "close": 0.7401300072669983
+        "close": 0.7383599877357483
       }
     ],
     "NBIS": [
