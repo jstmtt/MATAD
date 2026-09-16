@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 43223.53607700421,
+    "totalValue": 43352.02674670424,
     "mattValue": 0,
-    "addiValue": 43223.53607700421,
+    "addiValue": 43352.02674670424,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 216.11768038502106,
+    "dailyChange": 216.76013373352123,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-09-15T16:45:06.927Z"
+    "lastUpdated": "2026-09-16T04:28:02.642Z"
   },
   "positions": [
     {
       "symbol": "MRVL",
       "name": "Marvell Technology",
       "quantity": 34,
-      "avgPrice": 290.2757740340573,
-      "currentPrice": 222.3109659413979,
-      "marketValue": 7558.572842007529,
-      "profitLoss": -2310.803475150419,
+      "avgPrice": 290.4049454519902,
+      "currentPrice": 224.1207051016335,
+      "marketValue": 7620.103973455539,
+      "profitLoss": -2253.6641719121276,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "BE",
       "name": "Bloom Energy",
       "quantity": 28.33557457,
-      "avgPrice": 222.93446159081563,
-      "currentPrice": 262.9911954390272,
-      "marketValue": 7452.006629615999,
-      "profitLoss": 1135.0305689866432,
+      "avgPrice": 223.03366642665014,
+      "currentPrice": 263.34281880329814,
+      "marketValue": 7461.970079674852,
+      "profitLoss": 1142.182993022001,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -36,10 +36,10 @@
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 50,
-      "avgPrice": 215.85540917050994,
-      "currentPrice": 257.6810639335835,
-      "marketValue": 12884.053196679175,
-      "profitLoss": 2091.2827381536795,
+      "avgPrice": 215.95146385975787,
+      "currentPrice": 256.01240984284755,
+      "marketValue": 12800.620492142378,
+      "profitLoss": 2003.0472991544843,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -47,10 +47,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 6.5899935,
-      "avgPrice": 1592.8155141233874,
-      "currentPrice": 1526.0764970434234,
-      "marketValue": 10056.83419601893,
-      "profitLoss": -439.80968875335293,
+      "avgPrice": 1593.5243098854503,
+      "currentPrice": 1540.0733269091302,
+      "marketValue": 10149.073213854543,
+      "profitLoss": -352.24163038256114,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -58,10 +58,10 @@
       "symbol": "CRDO",
       "name": "Credo Technology",
       "quantity": 35,
-      "avgPrice": 288.3111919154278,
-      "currentPrice": 150.63054893378776,
-      "marketValue": 5272.069212682572,
-      "profitLoss": -4818.822504357401,
+      "avgPrice": 288.4394891031265,
+      "currentPrice": 152.00739964505524,
+      "marketValue": 5320.258987576934,
+      "profitLoss": -4775.123131032494,
       "owner": "Addi",
       "broker": "Trading 212"
     }
@@ -1838,8 +1838,14 @@
     {
       "date": "2026-09-15",
       "Matt": 0,
-      "Addi": 43209.25,
-      "Total": 43209.25
+      "Addi": 43157.84,
+      "Total": 43157.84
+    },
+    {
+      "date": "2026-09-16",
+      "Matt": 0,
+      "Addi": 43157.84,
+      "Total": 43157.84
     }
   ],
   "historicalPrices": {
@@ -2347,6 +2353,10 @@
       {
         "date": "2026-09-14",
         "close": 218.82000732421875
+      },
+      {
+        "date": "2026-09-15",
+        "close": 221.6999969482422
       }
     ],
     "BE": [
@@ -2853,6 +2863,10 @@
       {
         "date": "2026-09-14",
         "close": 257.04998779296875
+      },
+      {
+        "date": "2026-09-15",
+        "close": 259.3500061035156
       }
     ],
     "ALAB": [
@@ -3359,6 +3373,10 @@
       {
         "date": "2026-09-14",
         "close": 257.0400085449219
+      },
+      {
+        "date": "2026-09-15",
+        "close": 252.5399932861328
       }
     ],
     "SNDK1": [],
@@ -3866,6 +3884,10 @@
       {
         "date": "2026-09-14",
         "close": 150.08999633789062
+      },
+      {
+        "date": "2026-09-15",
+        "close": 150.38999938964844
       }
     ],
     "AXTI": [
@@ -4896,8 +4918,12 @@
         "close": 9.70341968536377
       },
       {
-        "date": "2026-09-15",
-        "close": 9.780980110168457
+        "date": "2026-09-14",
+        "close": 9.76123046875
+      },
+      {
+        "date": "2026-09-16",
+        "close": 9.773619651794434
       }
     ],
     "USDEUR=X": [
@@ -5426,8 +5452,12 @@
         "close": 0.8625199794769287
       },
       {
-        "date": "2026-09-15",
-        "close": 0.8661999702453613
+        "date": "2026-09-14",
+        "close": 0.865909993648529
+      },
+      {
+        "date": "2026-09-16",
+        "close": 0.8659999966621399
       }
     ],
     "USDGBP=X": [
@@ -5956,8 +5986,12 @@
         "close": 0.739329993724823
       },
       {
-        "date": "2026-09-15",
-        "close": 0.7419800162315369
+        "date": "2026-09-14",
+        "close": 0.7406899929046631
+      },
+      {
+        "date": "2026-09-16",
+        "close": 0.7416499853134155
       }
     ],
     "NBIS": [
