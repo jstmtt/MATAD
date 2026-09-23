@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 115.55,
-    "mattValue": 115.55,
+    "totalValue": 118.81,
+    "mattValue": 118.81,
     "addiValue": 0,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 0.57775,
+    "dailyChange": 0.5940500000000001,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-09-22T16:43:48.241Z"
+    "lastUpdated": "2026-09-23T04:24:18.728Z"
   },
   "positions": [
     {
       "symbol": "CRDO",
       "name": "CREDO TECHNOLOGY GROUP HOLDI",
       "quantity": 0.617,
-      "avgPrice": 187.27,
-      "currentPrice": 187.27,
-      "marketValue": 115.55,
-      "profitLoss": 0.00440999999999292,
+      "avgPrice": 192.56,
+      "currentPrice": 192.56,
+      "marketValue": 118.81,
+      "profitLoss": 0.00047999999999603915,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1166,6 +1166,12 @@
     },
     {
       "date": "2026-09-22",
+      "Matt": 115.55,
+      "Addi": 0,
+      "Total": 115.55
+    },
+    {
+      "date": "2026-09-23",
       "Matt": 115.55,
       "Addi": 0,
       "Total": 115.55
@@ -3723,8 +3729,12 @@
         "close": 9.834839820861816
       },
       {
-        "date": "2026-09-22",
-        "close": 9.865859985351562
+        "date": "2026-09-21",
+        "close": 9.835599899291992
+      },
+      {
+        "date": "2026-09-23",
+        "close": 9.847829818725586
       }
     ],
     "USDEUR=X": [
@@ -4253,8 +4263,12 @@
         "close": 0.8711000084877014
       },
       {
-        "date": "2026-09-22",
-        "close": 0.8741999864578247
+        "date": "2026-09-21",
+        "close": 0.8722500205039978
+      },
+      {
+        "date": "2026-09-23",
+        "close": 0.8747000098228455
       }
     ],
     "USDGBP=X": [
@@ -4783,8 +4797,12 @@
         "close": 0.7469000220298767
       },
       {
-        "date": "2026-09-22",
-        "close": 0.7504000067710876
+        "date": "2026-09-21",
+        "close": 0.7478929758071899
+      },
+      {
+        "date": "2026-09-23",
+        "close": 0.7507699728012085
       }
     ]
   }
