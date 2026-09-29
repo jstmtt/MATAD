@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 130.17,
-    "mattValue": 130.17,
+    "totalValue": 118.88,
+    "mattValue": 118.88,
     "addiValue": 0,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 0.6508499999999999,
+    "dailyChange": 0.5944,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-09-28T19:32:17.666Z"
+    "lastUpdated": "2026-09-29T05:23:03.233Z"
   },
   "positions": [
     {
       "symbol": "CRDO",
       "name": "CREDO TECHNOLOGY GROUP HOLDI",
       "quantity": 0.617,
-      "avgPrice": 210.97,
-      "currentPrice": 210.97,
-      "marketValue": 130.17,
-      "profitLoss": 0.0015099999999961256,
+      "avgPrice": 192.67,
+      "currentPrice": 192.67,
+      "marketValue": 118.88,
+      "profitLoss": 0.00261000000000422,
       "owner": "Matt",
       "broker": "Interactive Brokers"
     }
@@ -1202,9 +1202,15 @@
     },
     {
       "date": "2026-09-28",
-      "Matt": 130.17,
+      "Matt": 118.88,
       "Addi": 0,
-      "Total": 130.17
+      "Total": 118.88
+    },
+    {
+      "date": "2026-09-29",
+      "Matt": 118.88,
+      "Addi": 0,
+      "Total": 118.88
     }
   ],
   "historicalPrices": {
@@ -3227,6 +3233,10 @@
       {
         "date": "2026-09-25",
         "close": 210.97000122070312
+      },
+      {
+        "date": "2026-09-28",
+        "close": 192.6699981689453
       }
     ],
     "USDSEK=X": [
@@ -3751,8 +3761,12 @@
         "close": 9.927709579467773
       },
       {
-        "date": "2026-09-28",
-        "close": 9.953120231628418
+        "date": "2026-09-27",
+        "close": 9.933520317077637
+      },
+      {
+        "date": "2026-09-29",
+        "close": 9.978500366210938
       }
     ],
     "USDEUR=X": [
@@ -4277,8 +4291,12 @@
         "close": 0.8791400194168091
       },
       {
-        "date": "2026-09-28",
-        "close": 0.8792999982833862
+        "date": "2026-09-27",
+        "close": 0.8788899779319763
+      },
+      {
+        "date": "2026-09-29",
+        "close": 0.8798999786376953
       }
     ],
     "USDGBP=X": [
@@ -4803,8 +4821,12 @@
         "close": 0.7569599747657776
       },
       {
-        "date": "2026-09-28",
-        "close": 0.7541999816894531
+        "date": "2026-09-27",
+        "close": 0.7559000253677368
+      },
+      {
+        "date": "2026-09-29",
+        "close": 0.7552599906921387
       }
     ]
   }
