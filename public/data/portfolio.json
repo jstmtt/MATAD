@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 13153.50249753238,
+    "totalValue": 12958.045913164327,
     "mattValue": 0,
-    "addiValue": 13153.50249753238,
+    "addiValue": 12958.045913164327,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 65.7675124876619,
+    "dailyChange": 64.79022956582163,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-11-06T06:06:52.185Z"
+    "lastUpdated": "2026-11-06T19:12:15.933Z"
   },
   "positions": [
     {
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 35.4628854,
-      "avgPrice": 189.0159766460178,
-      "currentPrice": 187.51482822858875,
-      "marketValue": 6649.816864271128,
-      "profitLoss": -53.23505429567829,
+      "avgPrice": 188.04144703782595,
+      "currentPrice": 185.25425283035491,
+      "marketValue": 6569.650337985501,
+      "profitLoss": -98.84194876708897,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 7.7057717,
-      "avgPrice": 869.8741903509555,
-      "currentPrice": 844.0018581476078,
-      "marketValue": 6503.685633261251,
-      "profitLoss": -199.36628530555535,
+      "avgPrice": 865.3892882334667,
+      "currentPrice": 829.0403380596945,
+      "marketValue": 6388.395575178826,
+      "profitLoss": -280.09671157376425,
       "owner": "Addi",
       "broker": "Trading 212"
     }
@@ -4050,7 +4050,7 @@
       },
       {
         "date": "2026-11-06",
-        "close": 9.836600303649902
+        "close": 9.893659591674805
       }
     ],
     "USDEUR=X": [
@@ -4584,7 +4584,7 @@
       },
       {
         "date": "2026-11-06",
-        "close": 0.892799973487854
+        "close": 0.8970999717712402
       }
     ],
     "USDGBP=X": [
@@ -5118,7 +5118,7 @@
       },
       {
         "date": "2026-11-06",
-        "close": 0.7448099851608276
+        "close": 0.7486699819564819
       }
     ],
     "FICO": [
