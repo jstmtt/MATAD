@@ -1,38 +1,15 @@
 {
   "summary": {
-    "totalValue": 14383.397772602239,
+    "totalValue": 0,
     "mattValue": 0,
-    "addiValue": 14383.397772602239,
+    "addiValue": 0,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 71.9169888630112,
+    "dailyChange": 0,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-11-10T06:55:46.185Z"
+    "lastUpdated": "2026-11-10T19:34:05.484Z"
   },
-  "positions": [
-    {
-      "symbol": "ALAB",
-      "name": "Astera Labs",
-      "quantity": 35.4628854,
-      "avgPrice": 189.31335821485695,
-      "currentPrice": 213.52461231332546,
-      "marketValue": 7572.198856546889,
-      "profitLoss": 858.6009294842689,
-      "owner": "Addi",
-      "broker": "Trading 212"
-    },
-    {
-      "symbol": "SNDK1",
-      "name": "Sandisk",
-      "quantity": 7.7057717,
-      "avgPrice": 871.2427759912249,
-      "currentPrice": 883.9087350661259,
-      "marketValue": 6811.19891605535,
-      "profitLoss": 97.60098899273008,
-      "owner": "Addi",
-      "broker": "Trading 212"
-    }
-  ],
+  "positions": [],
   "transactions": [
     {
       "id": "10301799936",
@@ -401,1112 +378,1112 @@
     {
       "date": "2026-05-10",
       "Matt": 0,
-      "Addi": 13452.7,
-      "Total": 13452.7
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-11",
       "Matt": 0,
-      "Addi": 14079.68,
-      "Total": 14079.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-12",
       "Matt": 0,
-      "Addi": 13975.77,
-      "Total": 13975.77
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-13",
       "Matt": 0,
-      "Addi": 14673.33,
-      "Total": 14673.33
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-14",
       "Matt": 0,
-      "Addi": 14834.68,
-      "Total": 14834.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-15",
       "Matt": 0,
-      "Addi": 14977.95,
-      "Total": 14977.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-16",
       "Matt": 0,
-      "Addi": 14977.95,
-      "Total": 14977.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-17",
       "Matt": 0,
-      "Addi": 14977.95,
-      "Total": 14977.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-18",
       "Matt": 0,
-      "Addi": 14371.54,
-      "Total": 14371.54
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-19",
       "Matt": 0,
-      "Addi": 15388.61,
-      "Total": 15388.61
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-20",
       "Matt": 0,
-      "Addi": 16921.32,
-      "Total": 16921.32
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-21",
       "Matt": 0,
-      "Addi": 17288.72,
-      "Total": 17288.72
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-22",
       "Matt": 0,
-      "Addi": 17609.3,
-      "Total": 17609.3
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-23",
       "Matt": 0,
-      "Addi": 17609.3,
-      "Total": 17609.3
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-24",
       "Matt": 0,
-      "Addi": 17609.3,
-      "Total": 17609.3
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-25",
       "Matt": 0,
-      "Addi": 17609.3,
-      "Total": 17609.3
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-26",
       "Matt": 0,
-      "Addi": 18029.18,
-      "Total": 18029.18
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-27",
       "Matt": 0,
-      "Addi": 18263.59,
-      "Total": 18263.59
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-28",
       "Matt": 0,
-      "Addi": 19109.03,
-      "Total": 19109.03
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-29",
       "Matt": 0,
-      "Addi": 18884.9,
-      "Total": 18884.9
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-30",
       "Matt": 0,
-      "Addi": 18884.9,
-      "Total": 18884.9
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-05-31",
       "Matt": 0,
-      "Addi": 18884.9,
-      "Total": 18884.9
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-01",
       "Matt": 0,
-      "Addi": 18077.76,
-      "Total": 18077.76
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-02",
       "Matt": 0,
-      "Addi": 19342.73,
-      "Total": 19342.73
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-03",
       "Matt": 0,
-      "Addi": 19618.63,
-      "Total": 19618.63
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-04",
       "Matt": 0,
-      "Addi": 19423.94,
-      "Total": 19423.94
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-05",
       "Matt": 0,
-      "Addi": 17970.31,
-      "Total": 17970.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-06",
       "Matt": 0,
-      "Addi": 17970.31,
-      "Total": 17970.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-07",
       "Matt": 0,
-      "Addi": 17970.31,
-      "Total": 17970.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-08",
       "Matt": 0,
-      "Addi": 19008.31,
-      "Total": 19008.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-09",
       "Matt": 0,
-      "Addi": 18844.12,
-      "Total": 18844.12
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-10",
       "Matt": 0,
-      "Addi": 18459.7,
-      "Total": 18459.7
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-11",
       "Matt": 0,
-      "Addi": 19758,
-      "Total": 19758
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-12",
       "Matt": 0,
-      "Addi": 19746.65,
-      "Total": 19746.65
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-13",
       "Matt": 0,
-      "Addi": 19746.65,
-      "Total": 19746.65
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-14",
       "Matt": 0,
-      "Addi": 19746.65,
-      "Total": 19746.65
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-15",
       "Matt": 0,
-      "Addi": 20528.61,
-      "Total": 20528.61
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-16",
       "Matt": 0,
-      "Addi": 19553.73,
-      "Total": 19553.73
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-17",
       "Matt": 0,
-      "Addi": 20013.68,
-      "Total": 20013.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-18",
       "Matt": 0,
-      "Addi": 21516.96,
-      "Total": 21516.96
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-19",
       "Matt": 0,
-      "Addi": 21516.96,
-      "Total": 21516.96
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-20",
       "Matt": 0,
-      "Addi": 21516.96,
-      "Total": 21516.96
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-21",
       "Matt": 0,
-      "Addi": 21516.96,
-      "Total": 21516.96
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-22",
       "Matt": 0,
-      "Addi": 22318.06,
-      "Total": 22318.06
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-23",
       "Matt": 0,
-      "Addi": 20805.92,
-      "Total": 20805.92
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-24",
       "Matt": 0,
-      "Addi": 20908.77,
-      "Total": 20908.77
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-25",
       "Matt": 0,
-      "Addi": 20840.68,
-      "Total": 20840.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-26",
       "Matt": 0,
-      "Addi": 20618.68,
-      "Total": 20618.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-27",
       "Matt": 0,
-      "Addi": 20618.68,
-      "Total": 20618.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-28",
       "Matt": 0,
-      "Addi": 20618.68,
-      "Total": 20618.68
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-29",
       "Matt": 0,
-      "Addi": 22896.11,
-      "Total": 22896.11
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-06-30",
       "Matt": 0,
-      "Addi": 23855.73,
-      "Total": 23855.73
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-01",
       "Matt": 0,
-      "Addi": 22005.99,
-      "Total": 22005.99
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-02",
       "Matt": 0,
-      "Addi": 21139.28,
-      "Total": 21139.28
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-03",
       "Matt": 0,
-      "Addi": 21139.28,
-      "Total": 21139.28
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-04",
       "Matt": 0,
-      "Addi": 21139.28,
-      "Total": 21139.28
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-05",
       "Matt": 0,
-      "Addi": 21139.28,
-      "Total": 21139.28
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-06",
       "Matt": 0,
-      "Addi": 22072.66,
-      "Total": 22072.66
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-07",
       "Matt": 0,
-      "Addi": 20304.83,
-      "Total": 20304.83
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-08",
       "Matt": 0,
-      "Addi": 20669.04,
-      "Total": 20669.04
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-09",
       "Matt": 0,
-      "Addi": 21530.43,
-      "Total": 21530.43
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-10",
       "Matt": 0,
-      "Addi": 21371.56,
-      "Total": 21371.56
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-11",
       "Matt": 0,
-      "Addi": 21371.56,
-      "Total": 21371.56
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-12",
       "Matt": 0,
-      "Addi": 21371.56,
-      "Total": 21371.56
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-13",
       "Matt": 0,
-      "Addi": 19565.79,
-      "Total": 19565.79
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-14",
       "Matt": 0,
-      "Addi": 19556.21,
-      "Total": 19556.21
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-15",
       "Matt": 0,
-      "Addi": 19160.45,
-      "Total": 19160.45
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-16",
       "Matt": 0,
-      "Addi": 18065.35,
-      "Total": 18065.35
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-17",
       "Matt": 0,
-      "Addi": 17493.69,
-      "Total": 17493.69
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-18",
       "Matt": 0,
-      "Addi": 17493.69,
-      "Total": 17493.69
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-19",
       "Matt": 0,
-      "Addi": 17493.69,
-      "Total": 17493.69
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-20",
       "Matt": 0,
-      "Addi": 17687.67,
-      "Total": 17687.67
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-21",
       "Matt": 0,
-      "Addi": 18067.13,
-      "Total": 18067.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-22",
       "Matt": 0,
-      "Addi": 18460.94,
-      "Total": 18460.94
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-23",
       "Matt": 0,
-      "Addi": 18321.75,
-      "Total": 18321.75
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-24",
       "Matt": 0,
-      "Addi": 17066.72,
-      "Total": 17066.72
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-25",
       "Matt": 0,
-      "Addi": 17066.72,
-      "Total": 17066.72
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-26",
       "Matt": 0,
-      "Addi": 17066.72,
-      "Total": 17066.72
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-27",
       "Matt": 0,
-      "Addi": 16745.42,
-      "Total": 16745.42
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-28",
       "Matt": 0,
-      "Addi": 15954.96,
-      "Total": 15954.96
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-29",
       "Matt": 0,
-      "Addi": 15582.95,
-      "Total": 15582.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-30",
       "Matt": 0,
-      "Addi": 17354.32,
-      "Total": 17354.32
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-07-31",
       "Matt": 0,
-      "Addi": 17763.56,
-      "Total": 17763.56
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-01",
       "Matt": 0,
-      "Addi": 17763.56,
-      "Total": 17763.56
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-02",
       "Matt": 0,
-      "Addi": 17763.56,
-      "Total": 17763.56
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-03",
       "Matt": 0,
-      "Addi": 18111.81,
-      "Total": 18111.81
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-04",
       "Matt": 0,
-      "Addi": 19552.31,
-      "Total": 19552.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-05",
       "Matt": 0,
-      "Addi": 18018.9,
-      "Total": 18018.9
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-06",
       "Matt": 0,
-      "Addi": 18482.4,
-      "Total": 18482.4
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-07",
       "Matt": 0,
-      "Addi": 18577.08,
-      "Total": 18577.08
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-08",
       "Matt": 0,
-      "Addi": 18577.08,
-      "Total": 18577.08
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-09",
       "Matt": 0,
-      "Addi": 18577.08,
-      "Total": 18577.08
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-10",
       "Matt": 0,
-      "Addi": 17976.34,
-      "Total": 17976.34
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-11",
       "Matt": 0,
-      "Addi": 17790.52,
-      "Total": 17790.52
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-12",
       "Matt": 0,
-      "Addi": 18032.02,
-      "Total": 18032.02
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-13",
       "Matt": 0,
-      "Addi": 18173.16,
-      "Total": 18173.16
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-14",
       "Matt": 0,
-      "Addi": 18131.67,
-      "Total": 18131.67
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-15",
       "Matt": 0,
-      "Addi": 18131.67,
-      "Total": 18131.67
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-16",
       "Matt": 0,
-      "Addi": 18131.67,
-      "Total": 18131.67
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-17",
       "Matt": 0,
-      "Addi": 18080.6,
-      "Total": 18080.6
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-18",
       "Matt": 0,
-      "Addi": 17487.31,
-      "Total": 17487.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-19",
       "Matt": 0,
-      "Addi": 16975.93,
-      "Total": 16975.93
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-20",
       "Matt": 0,
-      "Addi": 17029.13,
-      "Total": 17029.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-21",
       "Matt": 0,
-      "Addi": 16832.31,
-      "Total": 16832.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-22",
       "Matt": 0,
-      "Addi": 16832.31,
-      "Total": 16832.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-23",
       "Matt": 0,
-      "Addi": 16832.31,
-      "Total": 16832.31
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-24",
       "Matt": 0,
-      "Addi": 16568.46,
-      "Total": 16568.46
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-25",
       "Matt": 0,
-      "Addi": 16750.03,
-      "Total": 16750.03
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-26",
       "Matt": 0,
-      "Addi": 17021.33,
-      "Total": 17021.33
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-27",
       "Matt": 0,
-      "Addi": 17510.36,
-      "Total": 17510.36
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-28",
       "Matt": 0,
-      "Addi": 16991.89,
-      "Total": 16991.89
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-29",
       "Matt": 0,
-      "Addi": 16991.89,
-      "Total": 16991.89
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-30",
       "Matt": 0,
-      "Addi": 16991.89,
-      "Total": 16991.89
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-08-31",
       "Matt": 0,
-      "Addi": 17258.22,
-      "Total": 17258.22
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-01",
       "Matt": 0,
-      "Addi": 16652.87,
-      "Total": 16652.87
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-02",
       "Matt": 0,
-      "Addi": 16447.89,
-      "Total": 16447.89
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-03",
       "Matt": 0,
-      "Addi": 16756.06,
-      "Total": 16756.06
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-04",
       "Matt": 0,
-      "Addi": 17734.13,
-      "Total": 17734.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-05",
       "Matt": 0,
-      "Addi": 17734.13,
-      "Total": 17734.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-06",
       "Matt": 0,
-      "Addi": 17734.13,
-      "Total": 17734.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-07",
       "Matt": 0,
-      "Addi": 17734.13,
-      "Total": 17734.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-08",
       "Matt": 0,
-      "Addi": 16969.9,
-      "Total": 16969.9
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-09",
       "Matt": 0,
-      "Addi": 17384.47,
-      "Total": 17384.47
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-10",
       "Matt": 0,
-      "Addi": 16816.7,
-      "Total": 16816.7
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-11",
       "Matt": 0,
-      "Addi": 17053.95,
-      "Total": 17053.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-12",
       "Matt": 0,
-      "Addi": 17053.95,
-      "Total": 17053.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-13",
       "Matt": 0,
-      "Addi": 17053.95,
-      "Total": 17053.95
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-14",
       "Matt": 0,
-      "Addi": 15841.83,
-      "Total": 15841.83
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-15",
       "Matt": 0,
-      "Addi": 15682.25,
-      "Total": 15682.25
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-16",
       "Matt": 0,
-      "Addi": 16272.35,
-      "Total": 16272.35
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-17",
       "Matt": 0,
-      "Addi": 17136.93,
-      "Total": 17136.93
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-18",
       "Matt": 0,
-      "Addi": 17480.57,
-      "Total": 17480.57
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-19",
       "Matt": 0,
-      "Addi": 17480.57,
-      "Total": 17480.57
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-20",
       "Matt": 0,
-      "Addi": 17480.57,
-      "Total": 17480.57
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-21",
       "Matt": 0,
-      "Addi": 18810.07,
-      "Total": 18810.07
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-22",
       "Matt": 0,
-      "Addi": 19615.79,
-      "Total": 19615.79
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-23",
       "Matt": 0,
-      "Addi": 19509.4,
-      "Total": 19509.4
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-24",
       "Matt": 0,
-      "Addi": 19511.18,
-      "Total": 19511.18
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-25",
       "Matt": 0,
-      "Addi": 19656.93,
-      "Total": 19656.93
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-26",
       "Matt": 0,
-      "Addi": 19656.93,
-      "Total": 19656.93
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-27",
       "Matt": 0,
-      "Addi": 19656.93,
-      "Total": 19656.93
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-28",
       "Matt": 0,
-      "Addi": 19184.92,
-      "Total": 19184.92
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-29",
       "Matt": 0,
-      "Addi": 19416.49,
-      "Total": 19416.49
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-09-30",
       "Matt": 0,
-      "Addi": 19350.17,
-      "Total": 19350.17
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-01",
       "Matt": 0,
-      "Addi": 19366.13,
-      "Total": 19366.13
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-02",
       "Matt": 0,
-      "Addi": 19150.16,
-      "Total": 19150.16
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-03",
       "Matt": 0,
-      "Addi": 19150.16,
-      "Total": 19150.16
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-04",
       "Matt": 0,
-      "Addi": 19150.16,
-      "Total": 19150.16
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-05",
       "Matt": 0,
-      "Addi": 19576.07,
-      "Total": 19576.07
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-06",
       "Matt": 0,
-      "Addi": 20549.88,
-      "Total": 20549.88
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-07",
       "Matt": 0,
-      "Addi": 20282.14,
-      "Total": 20282.14
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-08",
       "Matt": 0,
-      "Addi": 19033.84,
-      "Total": 19033.84
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-09",
       "Matt": 0,
-      "Addi": 18862.2,
-      "Total": 18862.2
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-10",
       "Matt": 0,
-      "Addi": 18862.2,
-      "Total": 18862.2
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-11",
       "Matt": 0,
-      "Addi": 18862.2,
-      "Total": 18862.2
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-12",
       "Matt": 0,
-      "Addi": 18220.33,
-      "Total": 18220.33
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-13",
       "Matt": 0,
-      "Addi": 18266.43,
-      "Total": 18266.43
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-14",
       "Matt": 0,
-      "Addi": 17375.25,
-      "Total": 17375.25
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-15",
       "Matt": 0,
-      "Addi": 17435.53,
-      "Total": 17435.53
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-16",
       "Matt": 0,
-      "Addi": 16862.45,
-      "Total": 16862.45
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-17",
       "Matt": 0,
-      "Addi": 16862.45,
-      "Total": 16862.45
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-18",
       "Matt": 0,
-      "Addi": 16862.45,
-      "Total": 16862.45
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-19",
       "Matt": 0,
-      "Addi": 16889.4,
-      "Total": 16889.4
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-20",
       "Matt": 0,
-      "Addi": 16826.28,
-      "Total": 16826.28
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-21",
       "Matt": 0,
-      "Addi": 17012.81,
-      "Total": 17012.81
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-22",
       "Matt": 0,
-      "Addi": 15869.49,
-      "Total": 15869.49
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-23",
       "Matt": 0,
-      "Addi": 15846.09,
-      "Total": 15846.09
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-24",
       "Matt": 0,
-      "Addi": 15846.09,
-      "Total": 15846.09
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-25",
       "Matt": 0,
-      "Addi": 15846.09,
-      "Total": 15846.09
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-26",
       "Matt": 0,
-      "Addi": 15929.42,
-      "Total": 15929.42
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-27",
       "Matt": 0,
-      "Addi": 16893.3,
-      "Total": 16893.3
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-28",
       "Matt": 0,
-      "Addi": 17266.02,
-      "Total": 17266.02
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-29",
       "Matt": 0,
-      "Addi": 17025.94,
-      "Total": 17025.94
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-30",
       "Matt": 0,
-      "Addi": 15900.7,
-      "Total": 15900.7
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-10-31",
       "Matt": 0,
-      "Addi": 15900.7,
-      "Total": 15900.7
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-01",
       "Matt": 0,
-      "Addi": 15900.7,
-      "Total": 15900.7
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-02",
       "Matt": 0,
-      "Addi": 14871.21,
-      "Total": 14871.21
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-03",
       "Matt": 0,
-      "Addi": 15011.29,
-      "Total": 15011.29
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-04",
       "Matt": 0,
-      "Addi": 14644.25,
-      "Total": 14644.25
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-05",
       "Matt": 0,
-      "Addi": 13090.97,
-      "Total": 13090.97
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-06",
       "Matt": 0,
-      "Addi": 13489.58,
-      "Total": 13489.58
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-07",
       "Matt": 0,
-      "Addi": 13489.58,
-      "Total": 13489.58
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-08",
       "Matt": 0,
-      "Addi": 13489.58,
-      "Total": 13489.58
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-09",
       "Matt": 0,
-      "Addi": 14417.29,
-      "Total": 14417.29
+      "Addi": 0,
+      "Total": 0
     },
     {
       "date": "2026-11-10",
       "Matt": 0,
-      "Addi": 14417.29,
-      "Total": 14417.29
+      "Addi": 0,
+      "Total": 0
     }
   ],
   "historicalPrices": {
@@ -4066,7 +4043,7 @@
       },
       {
         "date": "2026-11-10",
-        "close": 9.786250114440918
+        "close": 9.876620292663574
       }
     ],
     "USDEUR=X": [
@@ -4596,7 +4573,7 @@
       },
       {
         "date": "2026-11-10",
-        "close": 0.8903999924659729
+        "close": 0.8955000042915344
       }
     ],
     "USDGBP=X": [
@@ -5126,7 +5103,7 @@
       },
       {
         "date": "2026-11-10",
-        "close": 0.7436400055885315
+        "close": 0.7493299841880798
       }
     ],
     "FICO": [
