@@ -1,23 +1,23 @@
 {
   "summary": {
-    "totalValue": 14689.428964129731,
+    "totalValue": 14383.397772602239,
     "mattValue": 0,
-    "addiValue": 14689.428964129731,
+    "addiValue": 14383.397772602239,
     "manualValue": 0,
     "cashBalance": 0,
-    "dailyChange": 73.44714482064866,
+    "dailyChange": 71.9169888630112,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-11-09T22:11:58.033Z"
+    "lastUpdated": "2026-11-10T06:55:46.185Z"
   },
   "positions": [
     {
       "symbol": "ALAB",
       "name": "Astera Labs",
       "quantity": 35.4628854,
-      "avgPrice": 189.16836088152357,
-      "currentPrice": 219.3508027898651,
-      "marketValue": 7778.812381734986,
-      "profitLoss": 1070.356478487674,
+      "avgPrice": 189.31335821485695,
+      "currentPrice": 213.52461231332546,
+      "marketValue": 7572.198856546889,
+      "profitLoss": 858.6009294842689,
       "owner": "Addi",
       "broker": "Trading 212"
     },
@@ -25,10 +25,10 @@
       "symbol": "SNDK1",
       "name": "Sandisk",
       "quantity": 7.7057717,
-      "avgPrice": 870.5754808758885,
-      "currentPrice": 896.8104495484528,
-      "marketValue": 6910.616582394745,
-      "profitLoss": 202.16067914743277,
+      "avgPrice": 871.2427759912249,
+      "currentPrice": 883.9087350661259,
+      "marketValue": 6811.19891605535,
+      "profitLoss": 97.60098899273008,
       "owner": "Addi",
       "broker": "Trading 212"
     }
@@ -1499,8 +1499,14 @@
     {
       "date": "2026-11-09",
       "Matt": 0,
-      "Addi": 13489.58,
-      "Total": 13489.58
+      "Addi": 14417.29,
+      "Total": 14417.29
+    },
+    {
+      "date": "2026-11-10",
+      "Matt": 0,
+      "Addi": 14417.29,
+      "Total": 14417.29
     }
   ],
   "historicalPrices": {
@@ -3020,6 +3026,10 @@
       {
         "date": "2026-11-06",
         "close": 190.7100067138672
+      },
+      {
+        "date": "2026-11-09",
+        "close": 216.8699951171875
       }
     ],
     "SNDK1": [],
@@ -4052,7 +4062,11 @@
       },
       {
         "date": "2026-11-09",
-        "close": 9.79203987121582
+        "close": 9.890890121459961
+      },
+      {
+        "date": "2026-11-10",
+        "close": 9.786250114440918
       }
     ],
     "USDEUR=X": [
@@ -4578,7 +4592,11 @@
       },
       {
         "date": "2026-11-09",
-        "close": 0.890999972820282
+        "close": 0.8970800042152405
+      },
+      {
+        "date": "2026-11-10",
+        "close": 0.8903999924659729
       }
     ],
     "USDGBP=X": [
@@ -5104,7 +5122,11 @@
       },
       {
         "date": "2026-11-09",
-        "close": 0.7442100048065186
+        "close": 0.7484800219535828
+      },
+      {
+        "date": "2026-11-10",
+        "close": 0.7436400055885315
       }
     ],
     "FICO": [
