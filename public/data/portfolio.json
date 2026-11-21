@@ -7,7 +7,7 @@
     "cashBalance": 0,
     "dailyChange": 0,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-11-21T06:45:07.455Z"
+    "lastUpdated": "2026-11-21T18:59:35.775Z"
   },
   "positions": [],
   "transactions": [
@@ -5174,6 +5174,10 @@
       {
         "date": "2026-11-20",
         "close": 0.7641500234603882
+      },
+      {
+        "date": "2026-11-21",
+        "close": 0.7644199728965759
       }
     ],
     "FICO": [
