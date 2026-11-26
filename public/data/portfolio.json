@@ -7,7 +7,7 @@
     "cashBalance": 0,
     "dailyChange": 0,
     "dailyChangePercent": 0.5,
-    "lastUpdated": "2026-11-26T07:53:11.120Z"
+    "lastUpdated": "2026-11-26T21:17:36.563Z"
   },
   "positions": [],
   "transactions": [
@@ -4143,7 +4143,7 @@
       },
       {
         "date": "2026-11-26",
-        "close": 10.237369537353516
+        "close": 10.206450462341309
       }
     ],
     "USDEUR=X": [
@@ -5211,7 +5211,7 @@
       },
       {
         "date": "2026-11-26",
-        "close": 0.763480007648468
+        "close": 0.762910008430481
       }
     ],
     "FICO": [
